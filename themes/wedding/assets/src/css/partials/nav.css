@@ -1,6 +1,6 @@
 .site__nav {
     ul {
-        @apply flex justify-end items-center mb-0;
+        @apply flex items-center justify-end mb-0;
 
         li {
             @apply mb-0 list-none;
@@ -10,7 +10,7 @@
             }
 
             a {
-                @apply text-dark-1 hover:text-dark-3 font-semibold hover:underline hover:decoration-primary;
+
             }
         }
     }

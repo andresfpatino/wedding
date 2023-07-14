@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  * @link https://codex.wordpress.org/Template_Hierarchy
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header(); ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 
 <div class="flex items-center justify-center">
 
-    <?php fpsBaseTailwind__get_social_icons(); ?>
+    <?php themeWedding__get_social_icons(); ?>
 
 </div>
 

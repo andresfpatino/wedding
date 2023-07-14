@@ -7,7 +7,7 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  * @link https://codex.wordpress.org/Template_Hierarchy
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header(); ?>
@@ -45,9 +45,9 @@ get_header(); ?>
         <!-- List Post -->
 
         <!-- Pagination -->
-        <?php if (function_exists('fpsBaseTailwind__pagination')) : ?>
+        <?php if (function_exists('themeWedding__pagination')) : ?>
             <div class="pagination">
-                <?php fpsBaseTailwind__pagination($posts->max_num_pages, "", $paged); ?>
+                <?php themeWedding__pagination($posts->max_num_pages, "", $paged); ?>
             </div>
         <?php endif; ?>
         <!-- End Pagination -->

@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header(); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
             <!-- Pagination -->
             <?php if (function_exists('frontporchsolutions__pagination')) : ?>
                 <div class="pagination">
-                    <?php fpsBaseTailwind__pagination($posts->max_num_pages, "", $paged); ?>
+                    <?php themeWedding__pagination($posts->max_num_pages, "", $paged); ?>
                 </div>
             <?php endif; ?>
             <!-- End Pagination -->

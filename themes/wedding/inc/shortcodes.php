@@ -7,7 +7,7 @@
  * Usage: [button link="https://www.google.com.co" target="_blank" size="large"]go to google[/button]
  *
  */
-function fpsBaseTailwind__buttons($atts = [], $content = null)
+function themeWedding__buttons($atts = [], $content = null)
 {
 
     $a = shortcode_atts(array(
@@ -43,4 +43,4 @@ function fpsBaseTailwind__buttons($atts = [], $content = null)
         '</a>';
 }
 
-add_shortcode('button', 'fpsBaseTailwind__buttons');
+add_shortcode('button', 'themeWedding__buttons');

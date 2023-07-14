@@ -1,5 +1,5 @@
 <?php
-function fpsBaseTailwind__socialShare()
+function themeWedding__socialShare()
 {
     global $post;
     $variable = '';

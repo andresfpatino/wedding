@@ -8,17 +8,12 @@
         "prod": "webpack --mode production",
         "dev": "webpack --mode development --watch"
     },
-    "repository": {
-        "type": "bitbucket",
-        "url": "https://bitbucket.org/fps-dev/starter-theme-tailwind/src/master/"
-    },
     "keywords": [
         "Tailwind",
         "WordPress",
         "Theme",
         "CSS"
     ],
-    "author": "@mager19 + @yavallejo",
     "dependencies": {
         "@babel/polyfill": "7.11.5",
         "@tailwindcss/typography": "0.5.9"

@@ -1,5 +1,5 @@
 ::selection {
-    @apply text-white bg-primary;
+    @apply text-white;
 }
 
 /*--------------------------------------------------------------
@@ -49,7 +49,7 @@ textarea {
 }
 
 body {
-    @apply font-normal text-dark-1 font-text;
+    @apply font-normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: rem(16px);
@@ -74,17 +74,17 @@ h5,
 .h5,
 h6,
 .h6 {
-    @apply mb-4 font-heading text-dark-1;
+    @apply mb-4;
     hyphens: none;
     letter-spacing: -0.02em;
     word-break: keep-all;
     word-wrap: normal;
     clear: both;
     a {
-        @apply text-light-3;
+        
 
         &:hover {
-            @apply text-primary;
+            
         }
     }
 }
@@ -127,7 +127,7 @@ h6,
 # Paragraph
 --------------------------------------------------------------*/
 p {
-    @apply mb-4 text-dark-3 font-text;
+    @apply mb-4;
     hyphens: none;
     word-break: keep-all;
     word-wrap: normal;
@@ -209,7 +209,7 @@ i {
 }
 
 blockquote {
-    @apply text-center text-primary bg-primary;
+    @apply text-center;
     border-radius: 10px;
     margin-bottom: 24px;
     margin-top: 24px;
@@ -314,7 +314,7 @@ table {
 --------------------------------------------------------------*/
 .icon-social {
     .icons {
-        @apply flex gap-x-4 mt-4;
+        @apply flex mt-4 gap-x-4;
         .icon-link {
             svg {
                 width: 20px;
@@ -389,9 +389,9 @@ table {
 input[type="text"],
 select,
 textarea {
-    @apply font-normal text-light-1;
+   
     border-radius: 9px;
-    border: 1px solid theme(colors.primary.lighter);
+    border: 1px solid red;
     box-sizing: border-box;
     font-size: 14px;
     font-style: normal;
@@ -489,7 +489,7 @@ textarea:focus {
 }
 
 select {
-    @apply w-full py-4 appearance-none text-dark-3;
+    @apply w-full py-4 appearance-none;
     border-radius: 10px;
     border: 3px solid #ebf2ff;
     box-sizing: border-box;

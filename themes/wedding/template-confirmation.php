@@ -10,7 +10,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header(); ?>

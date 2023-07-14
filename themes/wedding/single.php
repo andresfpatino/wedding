@@ -3,7 +3,7 @@
 /**
  * The template for displaying all single posts
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
                     <?php the_post_thumbnail(); ?>
                     <?php
                     the_content();
-                    echo fpsBaseTailwind__socialShare();
+                    echo themeWedding__socialShare();
                     ?>
 
                     <div class="mt-8 entry-author">

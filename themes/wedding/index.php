@@ -10,7 +10,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package fpsBaseTailwind
+ * @package themeWedding
  */
 
 get_header();
@@ -36,9 +36,9 @@ global $wp_query;
         <!-- List Post -->
 
         <!-- Pagination -->
-        <?php if (function_exists('fpsBaseTailwind__pagination')) : ?>
+        <?php if (function_exists('themeWedding__pagination')) : ?>
             <div class="pagination">
-                <?php fpsBaseTailwind__pagination($wp_query->max_num_pages, "", $paged); ?>
+                <?php themeWedding__pagination($wp_query->max_num_pages, "", $paged); ?>
             </div>
         <?php endif; ?>
         <!-- End Pagination -->
