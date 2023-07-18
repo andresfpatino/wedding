@@ -1,9 +1,7 @@
 <?php
 // Get Image
-function fps_get_Image($image)
-{
-    if ($image)
-    {
+function fps_get_Image($image){
+    if ($image){
         $img_url = $image['url'];
         $img_alt = $image['alt'];
         $img_width = round($image['width'] / 2);
@@ -14,10 +12,8 @@ function fps_get_Image($image)
 }
 
 // Remove frameborder iframes
-add_filter('oembed_dataparse', function ($return, $data, $url)
-{
-    if (is_object($data))
-    {
+add_filter('oembed_dataparse', function ($return, $data, $url){
+    if (is_object($data)){
         // remove unwanted attributes
         $return = str_ireplace(array('frameborder="0"'), '', $return);
     }

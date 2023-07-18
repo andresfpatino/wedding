@@ -25,6 +25,9 @@ module.exports = {
             container: {
                 center: true,
             },
+            backgroundImage: {
+                'paper' : "url('/assets/src/img/background.jpg')",
+            },
         },
     },
     plugins: [

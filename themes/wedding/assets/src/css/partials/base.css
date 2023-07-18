@@ -49,7 +49,7 @@ textarea {
 }
 
 body {
-    @apply font-normal;
+    @apply font-normal bg-fixed bg-contain bg-paper;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: rem(16px);
