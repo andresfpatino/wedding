@@ -38,20 +38,7 @@
         <header id="masthead" class="px-4 bg-gray-300 site-header">
             <div class="container mx-auto">
                 <div class="flex items-center py-4 pxsera-4">
-                    <div class="w-9/12 sitelogo lg:w-4/12 ">
-                        <?php
-                        $GETlogo = get_field('fps_logo_site', 'option'); ?>
-                        <a href="<?php echo esc_url(get_bloginfo('url')); ?>">
-                            <?php if ($GETlogo)
-                            {
-                                fps_get_Image($GETlogo);
-                            }
-                            else
-                            {
-                                echo "<h3 class='mb-0'>Logo Brand</h3>";
-                            } ?>
-                        </a>
-                    </div>
+    
 
                     <!--Menu-->
                     <?php
@@ -65,7 +52,6 @@
                     <?php
                     }
                     ?>
-                    <!--/Menu-->
 
                     <!-- Button trigger mobile -->
                     <button type="button" class="flex justify-end w-3/12 border-none mobile-nav lg:hidden" id="menumobile">
@@ -75,7 +61,6 @@
 
                     </button>
 
-                    <!-- Button trigger mobile -->
                 </div>
             </div>
         </header>
