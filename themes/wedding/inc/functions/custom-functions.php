@@ -19,3 +19,26 @@ add_filter('oembed_dataparse', function ($return, $data, $url){
     }
     return $return;
 }, 10, 3);
+
+
+function event_date($fecha) {
+    $fecha_obj = DateTime::createFromFormat('d/m/Y g:i a', $fecha);
+    $nombres_meses_espanol = array(
+        'January' => 'enero',
+        'February' => 'febrero',
+        'March' => 'marzo',
+        'April' => 'abril',
+        'May' => 'mayo',
+        'June' => 'junio',
+        'July' => 'julio',
+        'August' => 'agosto',
+        'September' => 'septiembre',
+        'October' => 'octubre',
+        'November' => 'noviembre',
+        'December' => 'diciembre',
+    );
+
+    $nombre_mes_espanol = $nombres_meses_espanol[$fecha_obj->format('F')];
+
+    return "<p class='date'>" . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
+}

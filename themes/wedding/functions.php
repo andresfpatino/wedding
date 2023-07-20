@@ -16,9 +16,6 @@ require_once 'inc/scripts.php';
 /** ShortCode Theme **/
 require_once 'inc/shortcodes.php';
 
-/**  Social Shared Icons Function **/
-require_once 'inc/shared-social.php';
-
 /** ACF Custom functions **/
 require_once 'inc/functions/custom-functions.php';
 

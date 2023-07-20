@@ -1,5 +1,5 @@
 ::selection {
-    @apply text-white;
+    @apply text-white bg-blue;
 }
 
 /*--------------------------------------------------------------
@@ -49,7 +49,7 @@ textarea {
 }
 
 body {
-    @apply font-normal bg-fixed bg-contain bg-paper;
+    @apply font-normal bg-fixed bg-contain bg-paper font-openSans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: rem(16px);

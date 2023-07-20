@@ -13,12 +13,14 @@ module.exports = {
 				rosa: "#B7797A",
 				paloRosa: "#E3AFB1",
 				brown: "#D0947C",
-                black: "#000",
+                golden: "#F2BD6D",
+                green: "#90a99e",
+                black: "#22252A",
                 white: "#fff",
             },
 
             fontFamily: {
-				dancing: ['Dancing Script', 'cursive'],
+                dancing: ['Dancing Script', 'cursive'],
                 amatic: ['Amatic SC', 'cursive'],
                 openSans: ['Open Sans', 'sans-serif'],
             },
@@ -27,6 +29,8 @@ module.exports = {
             },
             backgroundImage: {
                 'paper' : "url('/assets/src/img/background.jpg')",
+                'portraitIzq' : "url('/assets/src/img/shape-izq.png')",
+                'portraitDer' : "url('/assets/src/img/shape-der.png')",
             },
         },
     },

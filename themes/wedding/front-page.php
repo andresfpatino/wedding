@@ -12,16 +12,21 @@
 
 get_header(); ?>
 
-
 <div class="content__page">
     <div class="container">
-       
         <?php while (have_posts()) : the_post(); ?>
-            <?php the_content(); ?>
-            <?php the_post_thumbnail(); ?>
-
-
-            <?php echo get_field('intro'); ?>
+            <div class="intro"> <?php
+                the_content(); 
+                if ( has_post_thumbnail() ) { ?>
+                    <div class="portrait"> <?php 
+                        the_post_thumbnail('large', array('class' => 'mainThumbnail'));
+                        echo event_date( get_field('fecha') ); ?>
+                    </div> <?php 
+                } ?>
+                <div class="copy">
+                    <?php echo get_field('intro'); ?>
+                </div>
+            </div>
 
             <?php echo get_field('locacion'); ?>
 

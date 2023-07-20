@@ -44,3 +44,16 @@ function themeWedding__buttons($atts = [], $content = null)
 }
 
 add_shortcode('button', 'themeWedding__buttons');
+
+
+
+function themeWedding__separator(){
+    return '
+        <div class="separator">
+            <span></span>
+            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"><path d="M21.5484 1.83955C19.0957 -0.613184 15.119 -0.613184 12.6664 1.83955C12.1293 2.37659 11.2586 2.37659 10.7216 1.83955C8.26884 -0.613184 4.29225 -0.613184 1.83951 1.83955C-0.613171 4.29224 -0.613171 8.26887 1.83951 10.7216L2.81195 11.6939L11.3235 20.2055C11.5281 20.4101 11.8598 20.4101 12.0644 20.2055L20.576 11.6939L21.5484 10.7216C24.0011 8.26887 24.0011 4.29224 21.5484 1.83955Z" fill="#8FA99D"/></svg>
+            <span></span>
+        </div>';
+}
+
+add_shortcode('separator', 'themeWedding__separator');

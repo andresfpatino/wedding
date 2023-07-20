@@ -1,0 +1,68 @@
+.site-content {
+    @apply py-16;
+}
+
+.site__nav {
+    ul {
+        @apply flex items-center justify-end mb-0;
+
+        li {
+            @apply mb-0 list-none;
+
+            &:not(:first-child) {
+                @apply ml-8;
+            }
+
+            a {
+                @apply font-light text-black uppercase -tracking-wider hover:text-blue font-openSans;
+            }
+
+            &.btn{
+                a{
+                    @apply px-3 py-2 text-xl font-bold uppercase rounded-md bg-blue text-gray font-amatic hover:bg-rosa;
+
+                }
+            }
+        }
+    }
+}
+
+.separator{
+    @apply flex items-center justify-center gap-3 mt-6;
+    span{
+        @apply w-10 h-[3px] bg-golden;
+    }
+}
+
+.intro{
+    h1{
+        @apply mb-0 text-6xl font-bold text-center text-black uppercase font-amatic;
+    }
+
+    .portrait{
+        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-8 my-16 bg-white;
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
+        .mainThumbnail{
+            @apply mb-5;
+        }
+        .date{
+            @apply mb-0 text-4xl text-center text-blue font-dancing;
+        }
+        &:before{
+            @apply bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
+        }
+        &:after{
+            @apply bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
+        }
+    }
+
+    .copy{
+        @apply text-center;
+        h2{
+
+        }
+        p{
+            
+        }
+    }
+}
