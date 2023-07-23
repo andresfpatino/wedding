@@ -31,6 +31,12 @@ module.exports = {
                 'paper' : "url('/assets/src/img/background.jpg')",
                 'portraitIzq' : "url('/assets/src/img/shape-izq.png')",
                 'portraitDer' : "url('/assets/src/img/shape-der.png')",
+                'pathLeft' : "url('/assets/src/img/path-left.png')",
+                'pathRight' : "url('/assets/src/img/path-right.png')",
+                'frame' : "url('/assets/src/img/frame.png')"
+            },
+            lineHeight: {
+                '120': '120%',
             },
         },
     },

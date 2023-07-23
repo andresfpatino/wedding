@@ -1,5 +1,25 @@
-.site-content {
-    @apply py-16;
+.site{
+    &:before{
+        @apply content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
+    }
+    &-content {
+        @apply py-16;
+    }
+    &-header{
+        @apply pt-6 transition-all duration-300 ease-linear;
+        &__wrap{
+            @apply container flex items-center justify-end;
+        }
+        &.isSticky{
+            @apply sticky top-0 z-10 py-3 bg-gray/30 backdrop-blur-sm;
+            .site-header__wrap{
+                @apply max-w-full px-4;
+            }
+        }
+    }
+    &_nav{
+        @apply hidden w-full lg:flex lg:justify-end;
+    }
 }
 
 .site__nav {
@@ -35,18 +55,23 @@
 }
 
 .intro{
+    @apply relative;
+    &:after{
+        @apply content-[''] w-[150px] h-[265px] bg-pathRight bg-contain absolute left-full bottom-0;
+    }
+
     h1{
-        @apply mb-0 text-6xl font-bold text-center text-black uppercase font-amatic;
+        @apply mb-0 text-5xl font-bold text-center uppercase text-dark font-amatic;
     }
 
     .portrait{
-        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-8 my-16 bg-white;
+        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-5 my-16 bg-white;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
         .mainThumbnail{
-            @apply mb-5;
+            @apply mb-3;
         }
         .date{
-            @apply mb-0 text-4xl text-center text-blue font-dancing;
+            @apply mb-0 text-3xl text-center text-blue font-dancing;
         }
         &:before{
             @apply bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
@@ -57,12 +82,53 @@
     }
 
     .copy{
-        @apply text-center;
+        @apply text-center lg:w-[60%] mx-auto;
         h2{
-
+            @apply text-5xl font-dancing text-dark mb-7;
         }
         p{
-            
+            @apply text-xl text-dark -tracking-wider;
         }
+    }
+}
+
+.location{
+    @apply relative py-20;
+    .frame{
+        @apply bg-frame bg-contain bg-center bg-no-repeat text-center w-[790px] mx-auto px-[160px] pt-[240px] pb-[150px];
+        h3{
+            @apply mb-8 text-5xl font-bold uppercase text-dark font-amatic;
+        }
+        p{
+            @apply text-xl leading-120 text-dark -tracking-wide;
+            em{
+                @apply not-italic font-semibold text-blue;
+            }
+            strong{
+                @apply text-3xl text-dark font-dancing;
+            }
+            &:last-of-type{
+                @apply mt-6;
+            }
+        }
+    }
+    .photo{
+        @apply absolute;
+        &.transform-left{
+            @apply top-0 left-0;
+        }
+        &.transform-right{
+            @apply bottom-0 right-0;
+        }
+    }
+}
+
+.photo{
+    @apply px-3 pt-3 transition-transform duration-200 ease-linear bg-white shadow-xl pb-11;
+    &.transform-left{
+        @apply -rotate-6 hover:rotate-0;
+    }
+    &.transform-right{
+        @apply rotate-6 hover:rotate-0;
     }
 }

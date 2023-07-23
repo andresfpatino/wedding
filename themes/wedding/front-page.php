@@ -28,15 +28,16 @@ get_header(); ?>
                 </div>
             </div>
 
-            <?php echo get_field('locacion'); ?>
-
-            <?php fps_get_Image(get_field('thumbnail_left')); ?>
-            <?php fps_get_Image(get_field('thumbnail_right')); ?>
-            
+            <div class="location">
+                <?php fps_get_Image(get_field('thumbnail_left'), 'photo transform-left'); ?>
+                <div class="frame">
+                    <?php echo get_field('locacion'); ?>
+                </div>
+                <?php fps_get_Image(get_field('thumbnail_right'), 'photo transform-right'); ?>
+            </div>
 
             <h2><?php echo get_field('titulo_countdown'); ?></h2>
             <p><?php echo get_field('fecha'); ?></p>
-
 
             <?php 
             $link = get_field('boton_calendario');

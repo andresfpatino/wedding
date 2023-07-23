@@ -138,21 +138,11 @@ p {
 --------------------------------------------------------------*/
 
 a {
-    color: royalblue;
+    @apply transition-all duration-500 ease-in-out;
 }
 
 a:visited {
     color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-    color: midnightblue;
-}
-
-a:focus {
-    outline: thin dotted;
 }
 
 a:hover,
