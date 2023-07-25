@@ -391,9 +391,6 @@ textarea {
 }
 select {
     @apply appearance-none;
-    /* Some browsers will not display the caret when using calc, so we put the fallback first */
-    background: url("../img/arrow-select.svg") #fff no-repeat 98.5% !important;
-    background: url("../img/arrow-select.svg") #fff no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
 /*For IE*/
 select::-ms-expand {
@@ -490,4 +487,8 @@ select {
 
 textarea {
     width: 100%;
+}
+
+.btn{
+    @apply px-3 py-2 text-xl font-bold uppercase rounded-md bg-blue !text-gray font-amatic hover:!bg-rosa;
 }

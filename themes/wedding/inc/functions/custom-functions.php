@@ -23,7 +23,7 @@ add_filter('oembed_dataparse', function ($return, $data, $url){
 
 
 function event_date($fecha) {
-    $fecha_obj = DateTime::createFromFormat('d/m/Y g:i a', $fecha);
+    $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
     $nombres_meses_espanol = array(
         'January' => 'enero',
         'February' => 'febrero',

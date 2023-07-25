@@ -13,9 +13,10 @@
 get_header(); ?>
 
 <div class="content__page">
-    <div class="container">
-        <?php while (have_posts()) : the_post(); ?>
-            <div class="intro"> <?php
+   
+    <?php while (have_posts()) : the_post(); ?>
+        <div class="intro"> 
+            <div class="container"> <?php
                 the_content(); 
                 if ( has_post_thumbnail() ) { ?>
                     <div class="portrait"> <?php 
@@ -27,54 +28,82 @@ get_header(); ?>
                     <?php echo get_field('intro'); ?>
                 </div>
             </div>
+        </div>
 
-            <div class="location">
+        <div class="location">
+            <div class="container relative">
                 <?php fps_get_Image(get_field('thumbnail_left'), 'photo transform-left'); ?>
                 <div class="frame">
                     <?php echo get_field('locacion'); ?>
                 </div>
                 <?php fps_get_Image(get_field('thumbnail_right'), 'photo transform-right'); ?>
             </div>
+        </div>
 
-            <h2><?php echo get_field('titulo_countdown'); ?></h2>
-            <p><?php echo get_field('fecha'); ?></p>
+        <div class="countdown">
+            <div class="container">
+                <h2 class="countdown--title"><?php echo get_field('titulo_countdown'); ?></h2> <?php 
 
-            <?php 
-            $link = get_field('boton_calendario');
-            if( $link ): 
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
-                ?>
-                <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-            <?php endif; ?>
+                $startDateCountdown = get_field('fecha');
+                $todayGet           = date('m/d/Y');
+                $dateTimestamp1 = strtotime($todayGet);
+                $dateTimestamp2 = strtotime($startDateCountdown);
 
-            <h2><?php echo get_field('titulo_galeria'); ?></h2>
+                if ($startDateCountdown) : ?>
+                    <div class="countdown--date" id="countdown">
+                        <div class="countdown--date-box">
+                            <strong id="days"></strong>
+                            <span>Días</span>
+                        </div>
+                        <div class="countdown--date-box">
+                            <strong id="hours"></strong>
+                            <span>Horas</span>
+                        </div>
+                        <div class="countdown--date-box">
+                            <strong id="minutes"></strong>
+                            <span>Minutos</span>
+                        </div>
+                        <div class="countdown--date-box">
+                            <strong id="seconds"></strong>
+                            <span>Segundos</span>
+                        </div>
+                    </div> <?php 
+                endif;
 
+                $link = get_field('boton_calendario');
+                if( $link ): 
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
+            </div>
+        </div>
 
-            <?php 
+        <div class="gallery">
+            <h2 class="gallery--title"><?php echo get_field('titulo_galeria'); ?></h2> <?php 
             $images = get_field('galeria');
             if( $images ): ?>
-                <ul>
+                <ul class="gallery--slide">
                     <?php foreach( $images as $image ): ?>
-                        <li>
-                            <a href="<?php echo esc_url($image['url']); ?>">
-                                <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            </a>
-                            <p><?php echo esc_html($image['caption']); ?></p>
+                        <li class="photo">
+                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <p class="caption"><?php echo esc_html($image['caption']); ?></p>
                         </li>
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
+        </div>
 
+        <div id="confirmacion" class="rspv">
+            <div class="container">
+                <?php echo get_field('contenido_asistencia'); ?>
+            </div>
+        </div>
 
-            <?php echo get_field('contenido_asistencia'); ?>
-
-
-        <?php endwhile; ?>
+    <?php endwhile; ?>
      
-       
-    </div>
 </div>
 <?php
 get_footer();

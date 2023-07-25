@@ -21,16 +21,35 @@ import "slick-carousel/slick/slick-theme.css";
         }
     }
 
-    // Slick
-    $(".slickDemo").slick({
-        arrows: true,
+
+    $(".gallery--slide").slick({
         infinite: true,
-        slidesToShow: 1,
-        dots: true,
-        slidesToScroll: 1,
-        mobileFirst: true,
-        autoplaySpeed: 3000,
+        arrows: false,
+        dots: false,
         autoplay: true,
-        speed: 500,
+        cssEase: "linear",
+        initialSlide: 0,
+        speed: 8000,
+        autoplaySpeed: 0,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        draggable: true,
+        responsive: [
+            {
+				breakpoint: 721,
+				settings: {
+					slidesToShow: 2,
+				}
+            },
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+        ]
     });
+
+
+
 })(jQuery);
