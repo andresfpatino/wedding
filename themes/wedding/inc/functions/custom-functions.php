@@ -43,3 +43,10 @@ function event_date($fecha) {
 
     return "<p class='date'>" . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
 }
+
+/** Google map API key **/
+function google_maps_api($api){
+    $api['key'] = 'AIzaSyAlQ79Fk9KfCDzpUufNYEQMpIf7oXLd2nA';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'google_maps_api');

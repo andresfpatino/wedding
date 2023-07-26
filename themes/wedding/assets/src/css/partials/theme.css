@@ -3,12 +3,12 @@
         @apply content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
     }
     &-content {
-        @apply pt-16;
+        @apply pt-24;
     }
     &-header{
         @apply pt-6 transition-all duration-300 ease-linear;
         &__wrap{
-            @apply container flex items-center justify-end;
+            @apply container flex items-center justify-center;
         }
         &.isSticky{
             @apply sticky top-0 z-10 py-3 bg-gray/30 backdrop-blur-sm;
@@ -24,7 +24,7 @@
 
 .site__nav {
     ul {
-        @apply flex items-center justify-end mb-0;
+        @apply flex items-center justify-end m-0 mb-0;
 
         li {
             @apply mb-0 list-none;
@@ -38,8 +38,9 @@
             }
 
             &.btn{
+                @apply transition-all duration-500 ease-in-out;
                 a{
-                    @apply px-3 py-2 text-xl font-bold uppercase rounded-md bg-blue text-gray font-amatic hover:bg-rosa;
+                    @apply  font-bold tracking-wide text-gray font-amatic;
 
                 }
             }
@@ -51,6 +52,9 @@
     @apply flex items-center justify-center gap-3 mt-6;
     span{
         @apply w-10 h-[3px] bg-golden;
+    }
+    svg{
+        animation: heartbeat 1s ease-in-out infinite;
     }
 }
 
@@ -134,7 +138,7 @@
 }
 
 .countdown{
-    @apply py-16 text-center;
+    @apply relative py-16 text-center;
     .separator{
         @apply absolute right-0;
     }
@@ -142,9 +146,42 @@
         @apply text-5xl font-bold font-amatic;
     }
     &--date{
-        @apply flex gap-6 px-16 py-8 mx-auto bg-white border-2 rounded-2xl my-9 w-max border-blue;
+        @apply relative flex gap-6 px-16 py-8 mx-auto my-16 bg-white border-2 rounded-2xl w-max border-blue;
+        
+        
+        @keyframes heartbeat{
+            0%
+            {
+                transform: scale( .75 );
+            }
+            20%
+            {
+                transform: scale( 1 );
+            }
+            40%
+            {
+                transform: scale( .75 );
+            }
+            60%
+            {
+                transform: scale( 1 );
+            }
+            80%
+            {
+                transform: scale( .75 );
+            }
+            100%
+            {
+                transform: scale( .75 );
+            }
+        }
+
+        .heart{
+            @apply absolute left-0 right-0 m-auto -top-6 w-9;
+            animation: heartbeat 1s ease-in-out infinite;
+        }
         &-box{
-            @apply flex flex-col justify-center gap-1 pr-8 border-r border-grayDark;
+            @apply flex flex-col justify-center gap-1 pr-[60px] border-r border-grayDark;
             &:last-child{
                 @apply pr-0 border-transparent;
             }
@@ -156,10 +193,13 @@
             }
         }
     }
+    &::after{
+        @apply -bottom-[150px] absolute left-0 content-[''] w-[248px] h-[410px] bg-contain bg-no-repeat bg-couple;
+    }
 }
 
 .gallery{
-    @apply py-16 overflow-hidden;
+    @apply relative py-16 overflow-x-clip;
     &--title{
         @apply mb-10 text-5xl font-bold text-center font-amatic;
     }
@@ -180,9 +220,16 @@
             @apply -mx-2 !pb-8;
         }
     }
+    &:after{
+        @apply -bottom-[150px] absolute -left-[50px] content-[''] w-[300px] h-[250px] bg-contain bg-no-repeat bg-plantBottom;         
+    }
 }
 
 .rspv{
+    @apply pb-16;
+    &:before{
+        @apply w-[180px] h-[317px] bg-shapeBottom content-[''] bg-cover bg-no-repeat absolute right-0;
+    }
     h2{
         @apply mb-0 text-5xl font-bold text-center font-amatic;
     }
@@ -200,5 +247,54 @@
         .ts-control{
             @apply shadow-none;
         }
+        .gfield_radio{
+            @apply flex items-center justify-center mx-auto w-[70%];
+            .gchoice{
+                @apply flex justify-center flex-1 gap-3;
+            }
+        }
+
+        .gform_page_footer{
+            @apply flex justify-center;
+        }
+
+        .gform-theme-button{
+            @apply px-6 py-1 text-xl font-bold uppercase border-none rounded-md cursor-pointer bg-blue text-gray font-amatic hover:bg-rosa;
+
+        }
     }
+}
+
+
+
+.locations-section{
+    .locations-title{
+        @apply relative -mb-[120px] z-[1] left-[50%] mt-32 font-black text-center text-black text-5xl italic -tracking-wider m-0;
+        transform: translate(-50%);
+    }
+    .acf-map {
+        @apply w-full h-[80vh] relative;
+    }
+    div[role="dialog"]:has(.gm-style-iw-d){
+        @apply z-50 p-5 rounded-none shadow-md;
+        button{
+            @apply right-6 top-6 !important;
+            span{
+                @apply w-7 h-7 m-0 !important;
+            }
+        }
+    }
+    .gm-style-iw-d{
+        @apply m-0 p-0 !important;
+    }
+    .marker-title{
+        @apply mt-0 mb-2 text-lg font-semibold text-black md:text-3xl;
+    }
+    .marker-address{
+        @apply text-black mb-0 text-sm lg:text-lg lg:w-[250px] font-medium leading-none;
+    }
+    .marker-schedule{
+        @apply mt-6 w-[200px] text-black text-sm font-normal;
+    }
+
 }

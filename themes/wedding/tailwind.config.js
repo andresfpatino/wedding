@@ -33,7 +33,10 @@ module.exports = {
                 'portraitDer' : "url('/assets/src/img/shape-der.png')",
                 'pathLeft' : "url('/assets/src/img/path-left.png')",
                 'pathRight' : "url('/assets/src/img/path-right.png')",
-                'frame' : "url('/assets/src/img/frame.png')"
+                'frame' : "url('/assets/src/img/frame.png')",
+                'couple' : "url('/assets/src/img/couple.png')",
+                'shapeBottom' : "url('/assets/src/img/shape-btn.png')",
+                'plantBottom' : "url('/assets/src/img/plant-btn.png')"
             },
             lineHeight: {
                 '120': '120%',
