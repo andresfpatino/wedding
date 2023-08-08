@@ -107,6 +107,9 @@
             @apply text-xl leading-120 text-dark -tracking-wide;
             em{
                 @apply not-italic font-semibold text-blue;
+                &:nth-child(2){
+                    @apply text-sm italic text-dark;
+                }
             }
             strong{
                 @apply text-3xl text-dark font-dancing;
@@ -268,33 +271,26 @@
 
 
 .locations-section{
-    .locations-title{
-        @apply relative -mb-[120px] z-[1] left-[50%] mt-32 font-black text-center text-black text-5xl italic -tracking-wider m-0;
-        transform: translate(-50%);
-    }
+
     .acf-map {
         @apply w-full h-[80vh] relative;
     }
+
     div[role="dialog"]:has(.gm-style-iw-d){
-        @apply z-50 p-5 rounded-none shadow-md;
-        button{
-            @apply right-6 top-6 !important;
-            span{
-                @apply w-7 h-7 m-0 !important;
-            }
-        }
+        @apply z-50 rounded-md shadow-none bg-gray;
+
     }
-    .gm-style-iw-d{
-        @apply m-0 p-0 !important;
-    }
+
     .marker-title{
-        @apply mt-0 mb-2 text-lg font-semibold text-black md:text-3xl;
+        @apply mt-0 mb-2 text-3xl font-bold font-amatic text-blue;
     }
     .marker-address{
-        @apply text-black mb-0 text-sm lg:text-lg lg:w-[250px] font-medium leading-none;
+        @apply mb-0 text-base leading-none text-dark;
     }
-    .marker-schedule{
-        @apply mt-6 w-[200px] text-black text-sm font-normal;
+
+    .btn{
+        @apply inline-block px-6 py-1 mt-3;
     }
+
 
 }

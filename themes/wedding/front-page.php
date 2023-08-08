@@ -101,35 +101,34 @@ get_header(); ?>
             <div class="container">
                 <?php echo get_field('contenido_asistencia'); ?>
             </div>
-        </div>   <?php 
+        </div>
 
-        $args = array(
-            'post_type'      => 'location',
-            'posts_per_page' => -1,
-        );
-
-        $the_query = new WP_Query($args); ?>
-
-
-        <h3>¿Cómo llegar? Maps lo sabe!</h3>
         <div class="locations-section">
             <div class='acf-map'> <?php 
+
+                $args = array(
+                    'post_type'      => 'location',
+                    'posts_per_page' => -1,
+                );
+    
+                $the_query = new WP_Query($args);
                 if( $the_query->have_posts() ):
                     while ( $the_query->have_posts() ) : $the_query->the_post();
             
                         $location = get_field('address');
             
-                        if( $location)  : ?>    
+                        if( $location)  :  ?>    
                             <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">   
                                 <h4 class="marker-title"><?php the_title(); ?> </h4>
-                                <p class="marker-address"><?php echo $location['address']; ?></p>
-                                <a href="https://www.google.com/maps/dir/Casa+Campestre+Villa+Mariana,+Casa+395+en+el+Km+4+v%C3%ADa+Cristo+Rey,+Cali,+Valle+del+Cauca/''/@3.4294833,-76.6045271,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x8e30a43b840a09e5:0x2a5d65d6482820ea!2m2!1d-76.563349!2d3.4293756!1m5!1m1!1s0x8e30a43b840a09e5:0x2a5d65d6482820ea!2m2!1d-76.563349!2d3.4293756!3e0?entry=ttu" target="_blank">¿Como llegar?</a>
+                                <p class="marker-address"> Casa 395 en el Km 4 vía Cristo Rey <br> Justo después del Aca de Noe.</p>
+                                <a class="btn" href="https://www.google.com/maps/dir/3.4321,-76.6067/Casa+Campestre+Villa+Mariana,+Casa+395+en+el+Km+4+v%C3%ADa+Cristo+Rey,+Cali,+Valle+del+Cauca/" target="_blank">¿Cómo llegar? Maps lo sabe!</a>
                             </div> <?php 
                         endif; 
                     endwhile; wp_reset_query(); 
                 endif; ?>
             </div>
         </div>  <?php
+
     endwhile; ?>
      
 </div>

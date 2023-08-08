@@ -46,7 +46,7 @@ function event_date($fecha) {
 
 /** Google map API key **/
 function google_maps_api($api){
-    $api['key'] = 'AIzaSyAlQ79Fk9KfCDzpUufNYEQMpIf7oXLd2nA';
+    $api['key'] = 'AIzaSyBHP7MZmlQgm_8IxzQUZgHzh6S3K-Oi_rI';
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'google_maps_api');
