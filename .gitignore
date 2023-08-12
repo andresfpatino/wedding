@@ -16,8 +16,8 @@ themes/wedding/.editorconfig
 
 
 # Enabled when deployment site in server dev
-plugins/
-uploads/
+#plugins/
+#uploads/
 
 # OS generated files #
 ######################
