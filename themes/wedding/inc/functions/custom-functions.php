@@ -22,6 +22,7 @@ add_filter('oembed_dataparse', function ($return, $data, $url){
 }, 10, 3);
 
 
+// Event date
 function event_date($fecha) {
     $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
     $nombres_meses_espanol = array(

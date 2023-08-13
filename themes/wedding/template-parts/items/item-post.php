@@ -31,7 +31,7 @@
 
         <div class="inline-block w-full mt-2">
             <a href="<?php the_permalink(); ?>" class="link">
-                <?php _e('Continue Reading', 'frontporchsolutions'); ?>
+                <?php _e('Continue Reading', 'weddingTheme'); ?>
             </a>
         </div>
     </div>

@@ -13,7 +13,7 @@ if (!function_exists('themeWedding')) :
     * Make theme available for translation.
     * Translations can be filed in the /languages/ directory.
     * If you're building a theme based on Inspect It First, use a find and replace
-    * to change 'frontporchsolutions' to the name of your theme in all the template files.
+    * to change 'weddingTheme' to the name of your theme in all the template files.
     */
         load_theme_textdomain('themeWedding', get_template_directory() . '/languages');
 
@@ -36,8 +36,8 @@ if (!function_exists('themeWedding')) :
         add_theme_support('post-thumbnails');
 
         register_nav_menus(array(
-            'menu-1' => esc_html__('Header', 'frontporchsolutions'),
-            'menu-2' => esc_html__('Footer', 'frontporchsolutions'),
+            'menu-1' => esc_html__('Header', 'weddingTheme'),
+            'menu-2' => esc_html__('Footer', 'weddingTheme'),
         ));
 
         /*

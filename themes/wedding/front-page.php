@@ -10,6 +10,8 @@
  * @package themeWedding
  */
 
+acf_form_head();
+
 get_header(); ?>
 
 <div class="content__page">
@@ -98,8 +100,12 @@ get_header(); ?>
         </div>
 
         <div id="confirmacion" class="rspv">
-            <div class="container">
-                <?php echo get_field('contenido_asistencia'); ?>
+            <div class="container"> <?php 
+                
+                echo get_field('contenido_asistencia'); 
+                
+                ?>
+                
             </div>
         </div>
 
@@ -121,7 +127,7 @@ get_header(); ?>
                             <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">   
                                 <h4 class="marker-title"><?php the_title(); ?> </h4>
                                 <p class="marker-address"> Casa 395 en el Km 4 vía Cristo Rey <br> Justo después del Aca de Noe.</p>
-                                <a class="btn" href="https://www.google.com/maps/dir/3.4321,-76.6067/Casa+Campestre+Villa+Mariana,+Casa+395+en+el+Km+4+v%C3%ADa+Cristo+Rey,+Cali,+Valle+del+Cauca/" target="_blank">¿Cómo llegar? Maps lo sabe!</a>
+                                <a class="btn" href="https://www.google.com/maps/dir/current+location/Casa+Campestre+Villa+Mariana,+Casa+395+en+el+Km+4+v%C3%ADa+Cristo+Rey,+Cali,+Valle+del+Cauca/" target="_blank">¿Cómo llegar? Maps lo sabe!</a>
                             </div> <?php 
                         endif; 
                     endwhile; wp_reset_query(); 
