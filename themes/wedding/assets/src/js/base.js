@@ -35,6 +35,12 @@ import "slick-carousel/slick/slick-theme.css";
         slidesToScroll: 1,
         draggable: true,
         responsive: [
+/*             {
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 5,
+				}
+            }, */
             {
 				breakpoint: 721,
 				settings: {

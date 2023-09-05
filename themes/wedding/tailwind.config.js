@@ -15,6 +15,7 @@ module.exports = {
 				brown: "#D0947C",
                 golden: "#F2BD6D",
                 green: "#90a99e",
+                greenDark: "#4A6360",
                 black: "#22252A",
                 white: "#fff",
             },
@@ -26,6 +27,10 @@ module.exports = {
             },
             container: {
                 center: true,
+            },
+            maxWidth: {
+                'container-mid' : '1300px',
+                'container-fluid' : '1800px',
             },
             backgroundImage: {
                 'paper' : "url('/assets/src/img/background.jpg')",
@@ -40,6 +45,7 @@ module.exports = {
             },
             lineHeight: {
                 '120': '120%',
+                '160': '160%',
             },
         },
     },

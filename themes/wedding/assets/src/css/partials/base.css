@@ -57,6 +57,14 @@ body {
     hyphens: none;
     word-break: keep-all;
     word-wrap: normal;
+
+
+    .container-mid{
+        @apply mx-auto xl:max-w-container-mid;
+    }
+    .container-fluid{
+        @apply mx-auto xl:max-w-container-fluid;
+    }
 }
 
 /*--------------------------------------------------------------

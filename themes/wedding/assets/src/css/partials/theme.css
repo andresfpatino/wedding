@@ -1,3 +1,14 @@
+@keyframes stickAnim {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .site{
     &:before{
         @apply content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
@@ -8,12 +19,18 @@
     &-header{
         @apply pt-6 transition-all duration-300 ease-linear;
         &__wrap{
-            @apply container flex items-center justify-center;
+            @apply container flex items-center justify-between;
+            .logo{
+                h1{
+                    @apply mb-0 text-3xl font-dancing text-blue;
+                }
+            }
         }
         &.isSticky{
             @apply sticky top-0 z-10 py-3 bg-gray/30 backdrop-blur-sm;
+            animation: stickAnim .3s ease-in-out;
             .site-header__wrap{
-                @apply max-w-full px-4;
+                @apply px-4;
             }
         }
     }
@@ -59,23 +76,28 @@
 }
 
 .intro{
-    @apply relative;
-    &:after{
-        @apply content-[''] w-[150px] h-[265px] bg-pathRight bg-contain absolute right-0 bottom-0;
+    @apply relative text-center;
+    
+    &:before{
+        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full bottom-0 h-[300px];
     }
 
-    h1{
-        @apply mb-0 text-5xl font-bold text-center uppercase text-dark font-amatic;
+    h2{
+        @apply mb-4 text-6xl font-bold text-center uppercase text-dark font-amatic;
+    }
+
+    p {
+        @apply font-bold uppercase font-openSans text-greenDark;
     }
 
     .portrait{
-        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-5 my-16 bg-white;
+        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-5 mt-8 bg-white;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
         .mainThumbnail{
             @apply mb-3;
         }
         .date{
-            @apply mb-0 text-3xl text-center text-blue font-dancing;
+            @apply mb-0 text-3xl text-center normal-case text-blue font-dancing;
         }
         &:before{
             @apply bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
@@ -84,64 +106,96 @@
             @apply bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
         }
     }
+}
 
+.content-wedding{
+    @apply py-20 bg-greenDark/10; 
     .copy{
-        @apply text-center lg:w-[60%] mx-auto;
-        h2{
-            @apply text-5xl font-dancing text-dark mb-7;
+        @apply grid grid-cols-12 text-left;
+        &--content{
+            @apply lg:col-span-5 lg:pr-16;
+            h5{
+                @apply font-bold uppercase font-openSans text-greenDark;
+            }
+            h2{
+                @apply text-5xl font-bold text-left font-amatic text-dark mb-7;
+            }
+            p{
+                @apply text-xl font-normal normal-case text-dark -tracking-wider;
+                &:last-of-type{
+                    @apply mb-0;
+                }
+            }
         }
-        p{
-            @apply text-xl text-dark -tracking-wider;
+        &--thumbs{
+            @apply flex items-center lg:col-span-6;
+            .photo{
+                @apply lg:w-[240px];
+            }
         }
     }
 }
 
 .location{
-    @apply relative py-20;
+    @apply relative py-40 bg-no-repeat bg-[length:95%] bg-center md:px-6 bg-frame;
+    .container-mid{
+        @apply grid grid-cols-2 gap-8;
+    }
     .frame{
-        @apply bg-frame bg-contain bg-center bg-no-repeat text-center w-[790px] mx-auto px-[160px] pt-[240px] pb-[150px];
+        @apply p-12 text-center bg-white rounded-2xl;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
+        img{
+            @apply w-4 mx-auto;
+        }
+        h4{
+            @apply mb-3 text-lg font-bold uppercase text-greenDark font-openSans;
+        }
         h3{
-            @apply mb-8 text-5xl font-bold uppercase text-dark font-amatic;
+            @apply mb-6 text-5xl font-bold leading-none text-dark font-amatic;
         }
         p{
-            @apply text-xl leading-120 text-dark -tracking-wide;
+            @apply text-dark font-openSans text-xl -tracking-wide font-normal leading-[120%];
+            u{
+                @apply text-sm no-underline block md:w-[70%] mx-auto;
+            }
+            &:nth-last-child(){
+                @apply !mb-0;
+            }
+        }
+        table{
+            @apply text-dark mb-4 mx-auto md:w-[70%] font-openSans text-xl -tracking-wide font-normal leading-[120%];
+            th{
+                @apply mb-3 text-sm font-bold uppercase text-greenDark font-openSans;
+            }
+            td{
+                @apply align-baseline;
+            }
             em{
-                @apply not-italic font-semibold text-blue;
-                &:nth-child(2){
-                    @apply text-sm italic text-dark;
-                }
-            }
-            strong{
-                @apply text-3xl text-dark font-dancing;
-            }
-            &:last-of-type{
-                @apply mt-6;
+                @apply text-sm not-italic font-normal text-blue;
             }
         }
-    }
-    .photo{
-        @apply absolute;
-        &.transform-left{
-            @apply top-0 left-0;
+        a{
+            @apply inline-block px-6 py-2 text-lg font-bold border-2 rounded-md hover:bg-blue hover:text-white text-blue font-openSans leading-160 border-greenDark mt-9;
         }
-        &.transform-right{
-            @apply bottom-0 right-0;
-        }
+
     }
 }
 
 .photo{
     @apply px-3 pt-3 transition-transform duration-200 ease-linear bg-white shadow-xl pb-11;
     &.transform-left{
-        @apply -rotate-6 hover:rotate-0;
+        @apply -rotate-12 hover:rotate-0;
+    }
+    &.transform-middle{
+        @apply rotate-6 hover:rotate-0;
     }
     &.transform-right{
-        @apply rotate-6 hover:rotate-0;
+        @apply rotate-12 hover:rotate-0;
     }
 }
 
 .countdown{
-    @apply relative py-16 text-center;
+    @apply relative py-16 text-center bg-greenDark/10;
     .separator{
         @apply absolute right-0;
     }
@@ -153,35 +207,29 @@
         
         
         @keyframes heartbeat{
-            0%
-            {
-                transform: scale( .75 );
+            0% {
+                transform: scale(0.85);
             }
-            20%
-            {
-                transform: scale( 1 );
+            20% {
+                transform: scale(1);
             }
-            40%
-            {
-                transform: scale( .75 );
+            40% {
+                transform: scale(0.85);
             }
-            60%
-            {
-                transform: scale( 1 );
+            60% {
+                transform: scale(1);
             }
-            80%
-            {
-                transform: scale( .75 );
+            80% {
+                transform: scale(0.85);
             }
-            100%
-            {
-                transform: scale( .75 );
+            100% {
+                transform: scale(0.85);
             }
         }
 
         .heart{
             @apply absolute left-0 right-0 m-auto -top-6 w-9;
-            animation: heartbeat 1s ease-in-out infinite;
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
         &-box{
             @apply flex flex-col justify-center gap-1 pr-[60px] border-r border-grayDark;
@@ -202,7 +250,7 @@
 }
 
 .gallery{
-    @apply relative py-16 overflow-x-clip;
+    @apply relative py-16 overflow-x-clip bg-greenDark/10 ;
     &--title{
         @apply mb-10 text-5xl font-bold text-center font-amatic;
     }
@@ -267,8 +315,6 @@
         }
     }
 }
-
-
 
 .locations-section{
 

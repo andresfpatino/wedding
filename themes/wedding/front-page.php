@@ -14,33 +14,50 @@ acf_form_head();
 
 get_header(); ?>
 
-<div class="content__page">
-   
-    <?php while (have_posts()) : the_post(); ?>
+<div class="content__page"> <?php 
+    while (have_posts()) : the_post(); ?>
+
         <div class="intro"> 
             <div class="container"> <?php
                 the_content(); 
                 if ( has_post_thumbnail() ) { ?>
                     <div class="portrait"> <?php 
-                        the_post_thumbnail('large', array('class' => 'mainThumbnail'));
+                        the_post_thumbnail('portada', array('class' => 'mainThumbnail'));
                         echo event_date( get_field('fecha') ); ?>
                     </div> <?php 
                 } ?>
+            </div>
+        </div>
+
+        <div class="content-wedding">
+            <div class="container-mid">
                 <div class="copy">
-                    <?php echo get_field('intro'); ?>
+                    <div class="copy--content">
+                        <?php echo get_field('intro'); ?>
+                    </div>
+                    <div class="copy--thumbs"> <?php 
+                        fps_get_Image(get_field('thumbnail_left'), 'photo transform-left');
+                        fps_get_Image(get_field('thumbnail_middle'), 'photo transform-middle');
+                        fps_get_Image(get_field('thumbnail_right'), 'photo transform-right'); ?>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="informacion" class="location">
-            <div class="container relative">
-                <?php fps_get_Image(get_field('thumbnail_left'), 'photo transform-left'); ?>
+        <div class="location">
+            <div class="container-mid">
                 <div class="frame">
                     <?php echo get_field('locacion'); ?>
                 </div>
-                <?php fps_get_Image(get_field('thumbnail_right'), 'photo transform-right'); ?>
+                <div class="frame">
+                    <?php echo get_field('horario'); ?>
+                </div>
             </div>
         </div>
+
+
+
+
 
         <div class="countdown">
             <div class="container">
@@ -71,16 +88,8 @@ get_header(); ?>
                             <span>Segundos</span>
                         </div>
                     </div> <?php 
-                endif;
-
-                $link = get_field('boton_calendario');
-                if( $link ): 
-                    $link_url = $link['url'];
-                    $link_title = $link['title'];
-                    $link_target = $link['target'] ? $link['target'] : '_self';
-                    ?>
-                    <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                <?php endif; ?>
+                endif; ?>
+                
             </div>
         </div>
 

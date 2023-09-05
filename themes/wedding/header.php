@@ -33,7 +33,10 @@
     <div id="page" class="site">
 
         <header id="masthead" class="site-header">
-            <div class="site-header__wrap"> <?php
+            <div class="site-header__wrap"> 
+                
+                <a class="logo" href="/"><h1>Tatiana & Andrés</h1></a>
+                <?php
                 if (has_nav_menu('menu-1')){ ?>
                     <div class="site__nav"> <?php wp_nav_menu(array('theme_location' => 'menu-1')); ?> </div> <?php
                 } ?>
