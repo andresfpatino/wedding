@@ -65,6 +65,10 @@ body {
     .container-fluid{
         @apply mx-auto xl:max-w-container-fluid;
     }
+    
+    &.modal-open{
+        @apply overflow-hidden;
+    }
 }
 
 /*--------------------------------------------------------------

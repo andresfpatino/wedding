@@ -93,11 +93,8 @@
     .portrait{
         @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-5 mt-8 bg-white;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
-        .mainThumbnail{
-            @apply mb-3;
-        }
         .date{
-            @apply mb-0 text-3xl text-center normal-case text-blue font-dancing;
+            @apply mt-3 mb-0 text-3xl text-center normal-case text-blue font-dancing;
         }
         &:before{
             @apply bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
@@ -109,7 +106,7 @@
 }
 
 .content-wedding{
-    @apply py-20 bg-greenDark/10; 
+    @apply py-32 bg-greenDark/10; 
     .copy{
         @apply grid grid-cols-12 text-left;
         &--content{
@@ -137,7 +134,7 @@
 }
 
 .location{
-    @apply relative py-40 bg-no-repeat bg-[length:95%] bg-center md:px-6 bg-frame;
+    @apply relative py-40 bg-no-repeat xl:bg-[length:1400px] bg-center md:px-6 bg-frame;
     .container-mid{
         @apply grid grid-cols-2 gap-8;
     }
@@ -155,9 +152,6 @@
         }
         p{
             @apply text-dark font-openSans text-xl -tracking-wide font-normal leading-[120%];
-            u{
-                @apply text-sm no-underline block md:w-[70%] mx-auto;
-            }
             &:nth-last-child(){
                 @apply !mb-0;
             }
@@ -195,7 +189,7 @@
 }
 
 .countdown{
-    @apply relative py-16 text-center bg-greenDark/10;
+    @apply relative text-center py-28 bg-greenDark/10;
     .separator{
         @apply absolute right-0;
     }
@@ -203,7 +197,7 @@
         @apply text-5xl font-bold font-amatic;
     }
     &--date{
-        @apply relative flex gap-6 px-16 py-8 mx-auto my-16 bg-white border-2 rounded-2xl w-max border-blue;
+        @apply relative flex gap-6 px-16 py-8 mx-auto mt-16 bg-white border-2 rounded-2xl w-max border-blue;
         
         
         @keyframes heartbeat{
@@ -250,7 +244,7 @@
 }
 
 .gallery{
-    @apply relative py-16 overflow-x-clip bg-greenDark/10 ;
+    @apply relative overflow-x-clip bg-greenDark/10 ;
     &--title{
         @apply mb-10 text-5xl font-bold text-center font-amatic;
     }
@@ -271,15 +265,17 @@
             @apply -mx-2 !pb-8;
         }
     }
-    &:after{
-        @apply -bottom-[150px] absolute -left-[50px] content-[''] w-[300px] h-[250px] bg-contain bg-no-repeat bg-plantBottom;         
-    }
 }
 
 .rspv{
-    @apply pb-16;
+    @apply relative py-28;
     &:before{
-        @apply w-[180px] h-[317px] bg-shapeBottom content-[''] bg-cover bg-no-repeat absolute right-0;
+        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full top-0 h-[300px];
+    }
+
+    &__wrap{
+        @apply p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
     }
     h2{
         @apply mb-0 text-5xl font-bold text-center font-amatic;
@@ -288,7 +284,10 @@
         @apply mt-3 mb-6;
     }
     p{
-        @apply text-lg leading-120 text-dark -tracking-wide w-[60%] mx-auto text-center;
+        @apply text-lg leading-120 text-dark -tracking-wide w-[80%] mx-auto text-center;
+        u{
+            @apply block mx-auto text-sm no-underline;
+        }
     }
     .gform_wrapper {
         @apply w-[40%] mx-auto mt-12;
@@ -339,4 +338,41 @@
     }
 
 
+}
+
+
+.modal-overlay {
+    @apply hidden fixed top-0 left-0 w-full h-full bg-dark/60 justify-center items-center z-[100] opacity-0 transition-opacity duration-500 ease-linear;
+}
+
+.modal {
+    @apply bg-white min-h-[95vh] md:h-max max-h-[95vh] overflow-hidden relative rounded-md mx-auto w-[90%] lg:w-[752px] opacity-0 scale-50 transition-all ease-linear duration-300;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.03), 0px 18px 39px 0px rgba(0, 0, 0, 0.03), 0px 71px 71px 0px rgba(0, 0, 0, 0.03), 0px 161px 96px 0px rgba(0, 0, 0, 0.02), 0px 286px 114px 0px rgba(0, 0, 0, 0.00), 0px 446px 125px 0px rgba(0, 0, 0, 0.00);
+    
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar-button:increment,
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        @apply w-1;
+    }
+
+    &.active{
+        @apply scale-100 opacity-100;
+    }   
+    &-close{
+        @apply absolute top-[18px] right-[18px] z-10 cursor-pointer;
+        path{
+            @apply hover:fill-blue;
+        }
+    }
+    video{
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
 }

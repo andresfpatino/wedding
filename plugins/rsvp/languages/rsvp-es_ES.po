@@ -1,21 +1,21 @@
 # Copyright (C) 2015
 # This file is distributed under the same license as the  package.
 # Andres Gomez <tanty0@gmail.com>, 2015.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: rsvp-plugin\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rsvp\n"
 "POT-Creation-Date: 2015-01-11 01:21+0200\n"
-"PO-Revision-Date: 2015-01-13 10:07+0200\n"
-"Last-Translator: Andres Gomez <tanty0@gmail.com>\n"
-"Language-Team: Spanish; Castilian <>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-09-09 22:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.3.1"
 
 #: rsvp_frontend.inc.php:28
 #, php-format
@@ -36,7 +36,7 @@ msgstr ""
 "comprobar si a&uacute;n hay alg&uacute;n sitio disponible."
 
 #: rsvp_frontend.inc.php:145
-#, c-format, php-format
+#, php-format
 msgid ""
 "Hi %s it looks like you have already RSVP'd. Would you like to edit your "
 "reservation?"
@@ -127,19 +127,19 @@ msgstr ""
 "tambi&eacute;n en este mismo momento."
 
 #: rsvp_frontend.inc.php:289
-#, c-format, php-format
+#, php-format
 msgid "Will %s be attending?"
 msgstr "&iquest;Asistir&aacute; %s?"
 
 #: rsvp_frontend.inc.php:302
-#, c-format, php-format
+#, php-format
 msgid "Does %s need a kids meal?"
 msgstr "&iquest;%s desea men&uacute; infantil?"
 
 #: rsvp_frontend.inc.php:312
-#, c-format, php-format
+#, php-format
 msgid "Does %s need a vegetarian meal?"
-msgstr "&iquest;%s desea men&uacute; vegetariano?"
+msgstr "&iquest;%s presenta alguna alergia o restricci&oacute;n nutricional?"
 
 #: rsvp_frontend.inc.php:335
 msgid ""
@@ -206,8 +206,8 @@ msgstr ""
 
 #: rsvp_frontend.inc.php:599
 msgid ""
-"<strong>We were unable to find anyone with the password you specified.</"
-"strong>"
+"<strong>We were unable to find anyone with the password you specified."
+"</strong>"
 msgstr ""
 "<strong>Hemos sido incapaces de encontrar a nadie con la contrase&ntilde;a "
 "que has proporcionado.</strong>"
@@ -225,13 +225,13 @@ msgstr ""
 #, php-format
 msgid "<strong>We were unable to find anyone with a name of %1$s %2$s</strong>"
 msgstr ""
-"<strong>Hemos sido incapaces de encontrar a nadie de nombre %1$s %2$s</"
-"strong>"
+"<strong>Hemos sido incapaces de encontrar a nadie de nombre %1$s "
+"%2$s</strong>"
 
 #: rsvp_frontend.inc.php:1080
 #, php-format
 msgid "Welcome back %s!"
-msgstr "&iexcl;Me alegra verte de nuevo %s!"
+msgstr "&iexcl;Nos alegra verte de nuevo %s!"
 
 #: rsvp_frontend.inc.php:1097
 msgid "Hi"
@@ -431,16 +431,16 @@ msgstr "Exigir una contrase&ntilde;a para poder registrarse:"
 msgid ""
 "Require only a Passcode to RSVP<br />(requires that passcodes are unique):"
 msgstr ""
-"S&oacute;lamente exigir una contrase&ntilde;a para realizar el registro<br /"
-">(es necesario que cada contrase&ntilde;a sea &uacute;nica):"
+"S&oacute;lamente exigir una contrase&ntilde;a para realizar el registro<br />"
+"(es necesario que cada contrase&ntilde;a sea &uacute;nica):"
 
 #: wp-rsvp.php:309
 msgid ""
 "Allow Open Registration (note - this will force passcodes for attendees):"
 msgstr ""
 "Ofrecer abiertamente la posibilidad de registrarse (nota - esto "
-"activar&aacute; la generaci&oacute;n de contrase&ntilde;as por cada "
-"registro):"
+"activar&aacute; la generaci&oacute;n de contrase&ntilde;as por cada registro)"
+":"
 
 #: wp-rsvp.php:314
 msgid "Do not scroll page to the top of the RSVP form:"

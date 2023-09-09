@@ -21,9 +21,25 @@ get_header(); ?>
             <div class="container"> <?php
                 the_content(); 
                 if ( has_post_thumbnail() ) { ?>
-                    <div class="portrait"> <?php 
-                        the_post_thumbnail('portada', array('class' => 'mainThumbnail'));
-                        echo event_date( get_field('fecha') ); ?>
+                    <div class="portrait"> 
+                        <a href="#" class="modal-trigger">
+                            <?php the_post_thumbnail('portada', array('class' => 'mainThumbnail')); ?>
+                        </a>
+                        <?php 
+                        $video = get_field('video');
+                        if( $video) : ?>       
+                            <div class="modal-overlay" id="modalOverlay">
+                                <div class="modal">  
+                                    <svg class="modal-close" id="closeModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0507 12L0 22.0507L1.94928 24L12 13.9493L22.0507 24L24 22.0507L13.9493 12L24 1.94928L22.0507 0L12 10.0507L1.94928 0L0 1.94928L10.0507 12Z" fill="black"/>
+                                    </svg> 
+                                    <video id="video" loop="" playsinline="" preload="auto" poster="<?php echo get_the_post_thumbnail_url(); ?>">
+                                        <source src="<?php echo $video ?>" type="video/mp4">
+                                    </video> 
+                                </div>
+                            </div> <?php
+                        endif; ?>
+                        <?php echo event_date( get_field('fecha') ); ?>
                     </div> <?php 
                 } ?>
             </div>
@@ -54,10 +70,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-
-
-
-
 
         <div class="countdown">
             <div class="container">
@@ -109,12 +121,10 @@ get_header(); ?>
         </div>
 
         <div id="confirmacion" class="rspv">
-            <div class="container"> <?php 
-                
-                echo get_field('contenido_asistencia'); 
-                
-                ?>
-                
+            <div class="container"> 
+                <div class="rspv__wrap">
+                    <?php echo get_field('contenido_asistencia'); ?>
+                </div>                
             </div>
         </div>
 
