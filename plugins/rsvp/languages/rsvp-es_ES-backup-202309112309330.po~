@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: rsvp-plugin\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rsvp\n"
 "POT-Creation-Date: 2015-01-11 01:21+0200\n"
-"PO-Revision-Date: 2023-09-09 22:20+0000\n"
+"PO-Revision-Date: 2023-09-11 23:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: rsvp_frontend.inc.php:189
 msgid "First Name: "
-msgstr "Nombre:"
+msgstr "Nombres:"
 
 #: rsvp_frontend.inc.php:196
 msgid "Last Name: "
@@ -139,7 +139,7 @@ msgstr "&iquest;%s desea men&uacute; infantil?"
 #: rsvp_frontend.inc.php:312
 #, php-format
 msgid "Does %s need a vegetarian meal?"
-msgstr "&iquest;%s presentas alguna alergia o restricci&oacute;n nutricional?"
+msgstr "&iquest;%s presenta alguna alergia o restricci&oacute;n nutricional?"
 
 #: rsvp_frontend.inc.php:335
 msgid ""

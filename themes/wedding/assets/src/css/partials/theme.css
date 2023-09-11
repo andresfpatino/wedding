@@ -68,7 +68,7 @@
 .separator{
     @apply flex items-center justify-center gap-3 mt-6;
     span{
-        @apply w-10 h-[3px] bg-golden;
+        @apply w-10 h-[2px] bg-golden;
     }
     svg{
         animation: heartbeat 1s ease-in-out infinite;
@@ -102,15 +102,29 @@
         &:after{
             @apply bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
         }
+        .modal-trigger{
+            @apply relative flex items-center justify-center;
+            .play-icon{
+                @apply absolute transition-all duration-300 ease-in-out scale-0 opacity-0 top-6 right-6;
+                img{
+                    @apply w-12;
+                }
+            }
+            &:hover{
+                .play-icon{
+                    @apply scale-100 opacity-100;
+                }
+            }
+        }
     }
 }
 
 .content-wedding{
-    @apply py-32 bg-greenDark/10; 
+    @apply pb-32 pt-52 bg-greenDark/10; 
     .copy{
         @apply grid grid-cols-12 text-left;
         &--content{
-            @apply lg:col-span-5 lg:pr-16;
+            @apply lg:col-span-7 lg:pr-12;
             h5{
                 @apply font-bold uppercase font-openSans text-greenDark;
             }
@@ -118,23 +132,35 @@
                 @apply text-5xl font-bold text-left font-amatic text-dark mb-7;
             }
             p{
-                @apply text-xl font-normal normal-case text-dark -tracking-wider;
+                @apply text-xl font-light normal-case text-dark -tracking-wider;
                 &:last-of-type{
                     @apply mb-0;
                 }
             }
         }
         &--thumbs{
-            @apply flex items-center lg:col-span-6;
+            @apply lg:col-span-5;
+            &-wrap{
+                @apply relative w-full h-full;
+            }
             .photo{
-                @apply lg:w-[240px];
+                @apply absolute lg:w-[240px];
+                &:nth-child(1){
+                    @apply lg:-top-32 lg:left-12;
+                }
+                &:nth-child(2){
+                    @apply lg:right-[60px];
+                }
+                &:nth-child(3){
+                    @apply lg:-bottom-14;
+                }
             }
         }
     }
 }
 
 .location{
-    @apply relative py-40 bg-no-repeat xl:bg-[length:1400px] bg-center md:px-6 bg-frame;
+    @apply relative py-40 bg-no-repeat lg:bg-contain xl:bg-[length:1300px] bg-center md:px-6 bg-frame;
     .container-mid{
         @apply grid grid-cols-2 gap-8;
     }
@@ -151,13 +177,13 @@
             @apply mb-6 text-5xl font-bold leading-none text-dark font-amatic;
         }
         p{
-            @apply text-dark font-openSans text-xl -tracking-wide font-normal leading-[120%];
+            @apply text-dark font-openSans text-xl -tracking-wide font-light leading-[120%];
             &:nth-last-child(){
                 @apply !mb-0;
             }
         }
         table{
-            @apply text-dark mb-4 mx-auto md:w-[70%] font-openSans text-xl -tracking-wide font-normal leading-[120%];
+            @apply text-dark mb-4 mx-auto md:w-[70%] font-openSans text-xl -tracking-wide font-light leading-[120%];
             th{
                 @apply mb-3 text-sm font-bold uppercase text-greenDark font-openSans;
             }
@@ -165,7 +191,7 @@
                 @apply align-baseline;
             }
             em{
-                @apply text-sm not-italic font-normal text-blue;
+                @apply text-sm not-italic font-light text-blue;
             }
         }
         a{
@@ -197,7 +223,7 @@
         @apply text-5xl font-bold font-amatic;
     }
     &--date{
-        @apply relative flex gap-6 px-16 py-8 mx-auto mt-16 bg-white border-2 rounded-2xl w-max border-blue;
+        @apply relative flex px-8 py-8 mx-auto mt-16 bg-white border-2 rounded-2xl w-max border-golden;
         
         
         @keyframes heartbeat{
@@ -226,12 +252,12 @@
             animation: heartbeat 1.5s ease-in-out infinite;
         }
         &-box{
-            @apply flex flex-col justify-center gap-1 pr-[60px] border-r border-grayDark;
+            @apply flex flex-col justify-center gap-1 pl-8 pr-8 border-r border-grayDark;
             &:last-child{
-                @apply pr-0 border-transparent;
+                @apply border-transparent;
             }
             strong{
-                @apply text-5xl font-dancing text-blue;
+                @apply text-5xl font-dancing text-greenDark;
             }
             span{
                 @apply text-3xl font-amatic text-dark;
@@ -269,48 +295,40 @@
 
 .rspv{
     @apply relative py-28;
+
     &:before{
         @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full top-0 h-[300px];
     }
 
     &__wrap{
-        @apply p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
-    }
-    h2{
-        @apply mb-0 text-5xl font-bold text-center font-amatic;
-    }
-    .separator{
-        @apply mt-3 mb-6;
-    }
-    p{
-        @apply text-lg leading-120 text-dark -tracking-wide w-[80%] mx-auto text-center;
-        u{
-            @apply block mx-auto text-sm no-underline;
+        h2{
+            @apply mb-0 text-5xl font-bold text-center font-amatic;
         }
-    }
-    .gform_wrapper {
-        @apply w-[40%] mx-auto mt-12;
-        .gform_heading{
-            @apply hidden;
+        .separator{
+            @apply mt-3 mb-6;
         }
-        .ts-control{
-            @apply shadow-none;
-        }
-        .gfield_radio{
-            @apply flex items-center justify-center mx-auto w-[70%];
-            .gchoice{
-                @apply flex justify-center flex-1 gap-3;
+        p{
+            @apply text-lg leading-120 text-dark -tracking-wide w-[80%] mx-auto text-center;
+            u{
+                @apply block mx-auto text-sm no-underline;
             }
         }
-
-        .gform_page_footer{
-            @apply flex justify-center;
-        }
-
-        .gform-theme-button{
-            @apply px-6 py-1 text-xl font-bold uppercase border-none rounded-md cursor-pointer bg-blue text-gray font-amatic hover:bg-rosa;
-
+        @apply p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
+        
+        form{
+            .rsvpParagraph{
+                @apply flex flex-col items-start;
+                label{
+                    @apply block mb-2 font-medium text-dark;
+                }
+                input{
+                    @apply w-full py-2 rounded-md outline-none border-greenDark focus:border-golden;
+                    &[type="submit"]{
+                        @apply py-2 text-2xl font-bold text-white transition-all duration-200 ease-in-out rounded-md cursor-pointer hover:bg-rosa font-amatic leading-160 bg-blue; 
+                    }
+                }
+            }
         }
     }
 }
@@ -326,27 +344,42 @@
 
     }
 
+    .gm-style-iw-d{
+        @apply !overflow-hidden p-6;
+    }
+    
+    .gm-style-iw-tc{
+        &::after{
+            @apply bg-gray;
+        }
+    }
+
+    .gm-style-iw.gm-style-iw-c{
+        button{
+            @apply p-0 m-0 top-2 right-2 !important;
+        }
+    }
+
     .marker-title{
-        @apply mt-0 mb-2 text-3xl font-bold font-amatic text-blue;
+        @apply mt-0 mb-3 text-3xl font-bold text-center font-amatic text-blue;
     }
     .marker-address{
-        @apply mb-0 text-base leading-none text-dark;
+        @apply mb-2 text-base leading-none text-center text-dark;
     }
 
     .btn{
-        @apply inline-block px-6 py-1 mt-3;
+        @apply inline-block w-full px-6 py-1 mt-3 text-center;
     }
 
 
 }
 
-
 .modal-overlay {
-    @apply hidden fixed top-0 left-0 w-full h-full bg-dark/60 justify-center items-center z-[100] opacity-0 transition-opacity duration-500 ease-linear;
+    @apply hidden fixed top-0 left-0 w-full h-full bg-dark/90 justify-center items-center z-[100] opacity-0 transition-opacity duration-500 ease-linear;
 }
 
 .modal {
-    @apply bg-white min-h-[95vh] md:h-max max-h-[95vh] overflow-hidden relative rounded-md mx-auto w-[90%] lg:w-[752px] opacity-0 scale-50 transition-all ease-linear duration-300;
+    @apply bg-white min-h-[60vh] overflow-hidden relative rounded-md mx-auto w-[90%] lg:w-[752px] opacity-0 scale-50 transition-all ease-linear duration-300;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.03), 0px 18px 39px 0px rgba(0, 0, 0, 0.03), 0px 71px 71px 0px rgba(0, 0, 0, 0.03), 0px 161px 96px 0px rgba(0, 0, 0, 0.02), 0px 286px 114px 0px rgba(0, 0, 0, 0.00), 0px 446px 125px 0px rgba(0, 0, 0, 0.00);
     
     &::-webkit-scrollbar {

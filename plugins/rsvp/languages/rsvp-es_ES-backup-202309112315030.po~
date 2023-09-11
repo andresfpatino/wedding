@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: rsvp-plugin\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rsvp\n"
 "POT-Creation-Date: 2015-01-11 01:21+0200\n"
-"PO-Revision-Date: 2023-09-11 23:15+0000\n"
+"PO-Revision-Date: 2023-09-11 23:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: includes/rsvp_frontend.inc.php:1440
 msgid "Complete your RSVP!"
-msgstr "&iexcl;Registrate!"
+msgstr "&iexcl; Registrate!"
 
 #: includes/class-rsvp-admin.php:301
 msgid "Continue to Attendee List"

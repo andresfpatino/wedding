@@ -13,8 +13,11 @@
 
 <footer class="site-footer">
     <div class="container">
-        <div class="text-center copyright">
-            <?php the_field('fps_copyright', 'option'); ?>
+        <div class="copyright">
+            <a class="logo" href="/"><h1>Tatiana & Andrés</h1></a>
+            <div class="copy">
+                <?php the_field('pie_de_pagina'); ?>
+            </div>
         </div>
     </div>
 </footer>
