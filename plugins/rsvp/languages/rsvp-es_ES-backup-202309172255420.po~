@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: rsvp-plugin\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rsvp\n"
 "POT-Creation-Date: 2015-01-11 01:21+0200\n"
-"PO-Revision-Date: 2023-09-11 23:10+0000\n"
+"PO-Revision-Date: 2023-09-17 22:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -60,9 +60,7 @@ msgstr ""
 
 #: includes/rsvp_frontend.inc.php:646
 msgid "<strong>We were unable to find anyone with a name of %1$s %2$s</strong>"
-msgstr ""
-"<strong>Hemos sido incapaces de encontrar a nadie de nombre %1$s "
-"%2$s</strong>"
+msgstr "<strong>No hemos encontrado a un invitado de nombre %1$s %2$s</strong>"
 
 #: includes/rsvp_frontend.inc.php:642
 #, fuzzy
@@ -224,7 +222,7 @@ msgstr ""
 
 #: includes/rsvp_frontend.inc.php:1440
 msgid "Complete your RSVP!"
-msgstr "&iexcl;Completar el registro!"
+msgstr "&iexcl;Registrate!"
 
 #: includes/class-rsvp-admin.php:301
 msgid "Continue to Attendee List"
@@ -1090,8 +1088,8 @@ msgid ""
 "The following people are associated with you.  At this time you can RSVP for "
 "them as well."
 msgstr ""
-"Las siguientes personas est&aacute;n asociadas contigo.  Puedes registrarlas "
-"tambi&eacute;n en este mismo momento."
+"Las siguientes personas est&aacute;n asociadas contigo. <br> Puedes "
+"registrarlas tambi&eacute;n en este mismo momento."
 
 #: includes/upgrade-to-pro-page.php:71
 msgid ""

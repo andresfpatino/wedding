@@ -14,7 +14,7 @@
 <footer class="site-footer">
     <div class="container">
         <div class="copyright">
-            <a class="logo" href="/"><h1>Tatiana & Andrés</h1></a>
+            <a class="logo" href="/">Tatiana & Andrés</a>
             <div class="copy">
                 <?php the_field('pie_de_pagina'); ?>
             </div>

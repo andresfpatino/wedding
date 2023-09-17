@@ -264,9 +264,6 @@
             }
         }
     }
-    &::after{
-        @apply -bottom-[150px] absolute left-0 content-[''] w-[248px] h-[410px] bg-contain bg-no-repeat bg-couple;
-    }
 }
 
 .gallery{
@@ -325,7 +322,38 @@
                 input{
                     @apply w-full py-2 rounded-md outline-none border-greenDark focus:border-golden;
                     &[type="submit"]{
-                        @apply py-2 text-2xl font-bold text-white transition-all duration-200 ease-in-out rounded-md cursor-pointer hover:bg-rosa font-amatic leading-160 bg-blue; 
+                        @apply py-2 mt-6 text-2xl font-bold text-white transition-all duration-200 ease-in-out rounded-md cursor-pointer hover:bg-rosa font-amatic leading-160 bg-blue; 
+                    }
+                }
+
+            }
+            .rsvpFormField{
+                @apply w-[80%] mx-auto;
+                &.rsvpBorderTop{
+                    @apply border-gray;
+                    .rsvpParagraph{
+                        @apply w-full pt-6;
+                    }
+                }
+                #mainVeggieMealY + label {
+                    @apply mr-4;
+                }
+            }
+
+            .rsvpAdditionalAttendeeTitle{
+                @apply text-lg font-openSans border-t border-gray pt-5 leading-tight font-medium w-[80%] mx-auto;
+            }
+
+            .rsvpAdditionalAttendee{
+                @apply border-none;
+
+                .rsvpAdditionalAttendeeQuestions{
+                    @apply mx-auto w-[80%];
+                    .rsvpFormField {
+                        @apply w-full;
+                        .rsvpParagraph{
+                            @apply w-full;
+                        }
                     }
                 }
             }
@@ -407,5 +435,20 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%,-50%);
+    }
+}
+
+.site-footer{
+    @apply py-2 bg-greenDark;
+    .copyright{
+        @apply flex items-center justify-between text-white;
+        .logo{
+            @apply text-white;
+        }
+        .copy{
+            p{
+                @apply mb-0;
+            }
+        }
     }
 }
