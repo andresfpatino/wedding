@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
     const header = document.querySelector("header");
     const headerHight = document.getElementById('masthead').clientHeight;
     function stickyMenu() {
-        if (window.pageYOffset >= headerHight) {
+        if (window.scrollY >= headerHight) {
             header.classList.add("isSticky")
         } else {
             header.classList.remove("isSticky");

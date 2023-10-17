@@ -439,15 +439,15 @@
 }
 
 .site-footer{
-    @apply py-2 bg-greenDark;
+    @apply py-2 bg-greenDark/10;
     .copyright{
         @apply flex items-center justify-between text-white;
         .logo{
-            @apply text-white;
+            @apply mb-0 text-2xl font-dancing text-blue;;
         }
         .copy{
             p{
-                @apply mb-0;
+                @apply mb-0 text-xl font-bold leading-none text-dark font-amatic;
             }
         }
     }
