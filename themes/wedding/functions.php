@@ -21,3 +21,6 @@ require_once 'inc/functions/custom-functions.php';
 
 /** Performance **/
 require_once 'inc/performance.php';
+
+/** Metabox **/
+require_once 'inc/functions/metabox.php';

@@ -16,7 +16,8 @@
     ],
     "dependencies": {
         "@babel/polyfill": "7.11.5",
-        "@tailwindcss/typography": "0.5.9"
+        "@tailwindcss/typography": "0.5.9",
+        "select2": "^4.1.0-rc.0"
     },
     "devDependencies": {
         "@babel/cli": "7.21.5",
