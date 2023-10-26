@@ -1,8 +1,6 @@
 
 (function ($) {
 
-    jQuery(document).ready(function(){
-
         var map;
 
         function initMap( $el ) {
@@ -245,6 +243,5 @@
             map = initMap( $(this) );  // create map
         });
 
-    });
 
 })(jQuery);
