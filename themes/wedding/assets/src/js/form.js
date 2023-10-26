@@ -20,8 +20,10 @@ $(function() {
     restrictionsRadios.on("change", function() {
         if ($(this).val() === "Si") {
             indicacionesDiv.show();
+            indicacionesDiv.find('textarea').attr("required", "required");
         } else {
             indicacionesDiv.hide();
+            indicacionesDiv.find('textarea').removeAttr("required");
         }
     });
   
@@ -31,14 +33,18 @@ $(function() {
   
         if (selectedOption.data("additional") === true && selectedRadio.val() === "Asistiré") {
             extraGuestDiv.show();
+            extraGuestDiv.find('input[type="radio"]').attr("required", "required");
         } else {
             extraGuestDiv.hide();
+            extraGuestDiv.find('input[type="radio"]').removeAttr("required");
         }
   
         if (selectedRadio.val() === "Asistiré") {
             restrictionsFieldset.show();
+            restrictionsFieldset.find('input[type="radio"]').attr("required", "required");
         } else {
             restrictionsFieldset.hide();
+            restrictionsFieldset.find('input[type="radio"]').removeAttr("required");
         }
     }
 });

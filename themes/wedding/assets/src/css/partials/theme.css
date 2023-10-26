@@ -326,8 +326,16 @@
 .contact-wp{
     @apply flex items-center justify-center gap-x-6;
     a{
-        @apply flex items-center gap-x-1;
+        @apply flex items-center text-xl gap-x-1 text-dark hover:text-blue font-dancing;
     }
+}
+
+.swal2-title{
+    @apply pt-0 font-amatic;
+}
+
+.swal2-html-container {
+    @apply text-lg !font-light;
 }
 
 .locations-section{
