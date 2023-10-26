@@ -181,6 +181,9 @@
             &:nth-last-child(){
                 @apply !mb-0;
             }
+            em{
+                @apply flex items-center justify-center font-normal text-greenDark gap-x-1;
+            }
         }
         table{
             @apply text-dark mb-4 mx-auto md:w-[70%] font-openSans text-xl -tracking-wide font-light leading-[120%];

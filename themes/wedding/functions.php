@@ -24,3 +24,6 @@ require_once 'inc/performance.php';
 
 /** Metabox **/
 require_once 'inc/functions/metabox.php';
+
+/** Custom Invitado Columns **/
+require_once 'inc/functions/custom-columns.php';
