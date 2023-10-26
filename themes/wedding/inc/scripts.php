@@ -6,6 +6,7 @@ function themeWedding_scripts(){
     wp_enqueue_style('font-openSans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
     wp_enqueue_style('main', get_template_directory_uri() . '/assets/dist/css/app.css', array(), '1.0', 'all');
     wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBHP7MZmlQgm_8IxzQUZgHzh6S3K-Oi_rI&callback=initMap', null, null, true);
+    wp_enqueue_script( 'sweetalert2', 'https://cdn.jsdelivr.net/npm/sweetalert2@11', null, '11', false);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/assets/dist/js/app.js', array('jquery'), '0.1', true);
 
     $startDateCountdown = get_field('fecha');

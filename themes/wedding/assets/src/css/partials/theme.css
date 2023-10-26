@@ -323,6 +323,13 @@
     }
 }
 
+.contact-wp{
+    @apply flex items-center justify-center gap-x-6;
+    a{
+        @apply flex items-center gap-x-1;
+    }
+}
+
 .locations-section{
 
     .acf-map {
