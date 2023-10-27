@@ -30,10 +30,12 @@ $(function() {
     function toggleExtraGuest() {
         var selectedOption = selectElement.find(":selected");
         var selectedRadio = asistenciaRadios.filter(":checked");
-  
+        var dataNameExtraGuest = selectedOption.attr('data-name-extraGuest');
+
         if (selectedOption.data("additional") === true && selectedRadio.val() === "Asistiré") {
             extraGuestDiv.show();
             extraGuestDiv.find('input[type="radio"]').attr("required", "required");
+            $('#nombreInvitadoAdicional').text(dataNameExtraGuest);
         } else {
             extraGuestDiv.hide();
             extraGuestDiv.find('input[type="radio"]').removeAttr("required");

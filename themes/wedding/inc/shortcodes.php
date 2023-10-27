@@ -119,13 +119,15 @@ function rsvp_form() {
                     $value = str_replace(' ', '-', strtolower($nombre));
                     $invitado_adicional = get_sub_field('con_invitado_adicional');
                     $additional_attr = $invitado_adicional == "true" ? 'data-additional="true"' : '';
-                    $options[$nombre] = array('value' => $value, 'additional_attr' => $additional_attr);
+                    $nombreInvitadoAdicional = get_sub_field('nombre_invitado_adicional');
+                    $aditional_guestName = $nombreInvitadoAdicional ? 'data-name-extraGuest="' . $nombreInvitadoAdicional . '"' : '';
+                    $options[$nombre] = array('value' => $value, 'additional_attr' => $additional_attr, 'additional_guestName' => $aditional_guestName);
                 }
                 asort($options); ?>
                 <select class="invitados" name="invitado" id="invitado" required>
                     <option></option>
                     <?php foreach ($options as $nombre => $data) : ?>
-                        <option value="<?= $nombre; ?>" <?= $data['additional_attr']; ?>><?= $nombre; ?></option>
+                        <option value="<?= $nombre; ?>" <?= $data['additional_attr'] . $data['additional_guestName']; ?>><?= $nombre; ?></option>
                     <?php endforeach; ?>
                 </select>
             <?php } ?>            
@@ -144,7 +146,7 @@ function rsvp_form() {
         </fieldset>
 
         <fieldset class="extra-guest">
-            <legend>¿Vendrás acompañado?</legend>
+            <legend>¿Vendrás acompañado de <span id="nombreInvitadoAdicional"></span>  ?</legend>
             <div>
                 <input type="radio" id="si-acompanado" name="acompanado" value="Si, iré acompañado">
                 <label for="si-acompanado">Si </label>
