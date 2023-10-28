@@ -91,16 +91,16 @@
     }
 
     .portrait{
-        @apply px-6 relative lg:w-[60%] mx-auto pt-6 pb-5 mt-8 bg-white;
+        @apply px-6 relative md:w-[70%] lg:w-[60%] mx-auto pt-6 pb-5 mt-8 bg-white;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
         .date{
             @apply mt-3 mb-0 text-3xl text-center normal-case text-blue font-dancing;
         }
         &:before{
-            @apply bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
+            @apply hidden lg:block bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
         }
         &:after{
-            @apply bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
+            @apply hidden lg:block bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
         }
         .modal-trigger{
             @apply relative flex items-center justify-center;

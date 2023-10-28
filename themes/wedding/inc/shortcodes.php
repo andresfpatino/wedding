@@ -120,7 +120,7 @@ function rsvp_form() {
                     $invitado_adicional = get_sub_field('con_invitado_adicional');
                     $additional_attr = $invitado_adicional == "true" ? 'data-additional="true"' : '';
                     $nombreInvitadoAdicional = get_sub_field('nombre_invitado_adicional');
-                    $aditional_guestName = $nombreInvitadoAdicional ? 'data-name-extraGuest="' . $nombreInvitadoAdicional . '"' : '';
+                    $aditional_guestName = $nombreInvitadoAdicional ? ' data-name-extraGuest="' . $nombreInvitadoAdicional . '"' : '';
                     $options[$nombre] = array('value' => $value, 'additional_attr' => $additional_attr, 'additional_guestName' => $aditional_guestName);
                 }
                 asort($options); ?>
