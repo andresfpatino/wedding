@@ -10,28 +10,25 @@
 }
 
 .site{
-    &:before{
-        @apply content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
-    }
+    /* &:before{
+        @apply hidden md:block content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
+    } */
     &-content {
         @apply pt-24;
     }
     &-header{
-        @apply pt-6 transition-all duration-300 ease-linear;
+        @apply px-4 pt-6 transition-all duration-300 ease-linear md:px-0;
         &__wrap{
-            @apply container flex items-center justify-between;
+            @apply container flex items-center justify-between gap-x-4;
             .logo{
                 h1{
-                    @apply mb-0 text-3xl font-dancing text-blue;
+                    @apply mb-0 text-2xl md:text-3xl font-dancing text-blue;
                 }
             }
         }
         &.isSticky{
             @apply sticky top-0 z-10 py-3 bg-gray/30 backdrop-blur-sm;
             animation: stickAnim .3s ease-in-out;
-            .site-header__wrap{
-                @apply px-4;
-            }
         }
     }
     &_nav{
@@ -57,7 +54,7 @@
             &.btn{
                 @apply transition-all duration-500 ease-in-out;
                 a{
-                    @apply  font-bold tracking-wide text-gray font-amatic;
+                    @apply block text-lg font-bold leading-none tracking-wide text-gray font-amatic;
 
                 }
             }
@@ -76,14 +73,14 @@
 }
 
 .intro{
-    @apply relative text-center;
+    @apply relative px-4 text-center md:px-0;
     
     &:before{
-        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full bottom-0 h-[300px];
+        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full bottom-0 h-[170px] md:h-[300px];
     }
 
     h2{
-        @apply mb-4 text-6xl font-bold text-center uppercase text-dark font-amatic;
+        @apply mb-4 text-5xl font-bold text-center uppercase md:text-6xl text-dark font-amatic;
     }
 
     p {
@@ -91,16 +88,16 @@
     }
 
     .portrait{
-        @apply px-6 relative md:w-[70%] lg:w-[60%] mx-auto pt-6 pb-5 mt-8 bg-white;
+        @apply px-4 md:px-4 relative md:w-[70%] lg:w-[60%] mx-auto pt-4 md:pt-6 pb-4 md:pb-5 mt-8 bg-white;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.22);
         .date{
-            @apply mt-3 mb-0 text-3xl text-center normal-case text-blue font-dancing;
+            @apply mt-3 mb-0 text-xl text-center normal-case md:text-3xl text-blue font-dancing;
         }
         &:before{
-            @apply hidden lg:block bg-contain right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitIzq;
+            @apply hidden md:block bg-contain md:right-[calc(100%_-_70px)] lg:right-[calc(100%_-_170px)] -z-[1] bottom-0 bg-no-repeat content-[''] w-[200px] lg:w-[300px] h-[200px] absolute bg-portraitIzq;
         }
         &:after{
-            @apply hidden lg:block bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-[''] w-[300px] h-[200px] absolute bg-portraitDer;
+            @apply hidden md:block bg-contain left-[calc(100%_-_113px)] -z-[1] -top-[90px] bg-no-repeat content-['']  w-[200px] lg:w-[300px] h-[200px] absolute bg-portraitDer;
         }
         .modal-trigger{
             @apply relative flex items-center justify-center;
@@ -120,36 +117,36 @@
 }
 
 .content-wedding{
-    @apply pb-32 pt-52 bg-greenDark/10; 
+    @apply pt-12 md:pb-14 lg:pb-32 md:pt-20 lg:pt-52 bg-greenDark/10; 
     .copy{
-        @apply grid grid-cols-12 text-left;
+        @apply grid px-4 pb-12 text-left lg:grid-cols-12 xl:px-0 md:pb-0;
         &--content{
             @apply lg:col-span-7 lg:pr-12;
             h5{
                 @apply font-bold uppercase font-openSans text-greenDark;
             }
             h2{
-                @apply text-5xl font-bold text-left font-amatic text-dark mb-7;
+                @apply mb-4 text-4xl font-bold text-left md:text-5xl font-amatic text-dark md:mb-7;
             }
             p{
-                @apply text-xl font-light normal-case text-dark -tracking-wider;
+                @apply text-lg font-light normal-case md:text-xl text-dark -tracking-wider;
                 &:last-of-type{
                     @apply mb-0;
                 }
             }
         }
         &--thumbs{
-            @apply lg:col-span-5;
+            @apply lg:col-span-5 md:mt-8 lg:mt-0;
             &-wrap{
-                @apply relative w-full h-full;
+                @apply relative hidden w-full h-full md:flex md:justify-center md:items-center md:gap-6;
             }
             .photo{
-                @apply absolute lg:w-[240px];
+                @apply lg:absolute md:w-[25%] lg:w-[240px];
                 &:nth-child(1){
-                    @apply lg:-top-32 lg:left-12;
+                    @apply lg:-top-32 lg:left-0 xl:left-12;
                 }
                 &:nth-child(2){
-                    @apply lg:right-[60px];
+                    @apply lg:right-4 lg:-top-[80px] xl:right-[60px];
                 }
                 &:nth-child(3){
                     @apply lg:-bottom-14;
@@ -160,26 +157,26 @@
 }
 
 .location{
-    @apply relative py-40 bg-no-repeat lg:bg-contain xl:bg-[length:1300px] bg-center md:px-6 bg-frame;
+    @apply relative px-4 md:px-6 py-12 lg:py-40 bg-repeat-y lg:bg-no-repeat bg-[length:100%] bg-top xl:bg-[length:1300px] lg:bg-center bg-frame;
     .container-mid{
-        @apply grid grid-cols-2 gap-8;
+        @apply grid gap-8 lg:grid-cols-2;
     }
     .frame{
-        @apply p-12 text-center bg-white rounded-2xl;
+        @apply px-4 py-6 text-center bg-white md:p-12 rounded-2xl;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
         img{
             @apply w-4 mx-auto;
         }
         h4{
-            @apply mb-3 text-lg font-bold uppercase text-greenDark font-openSans;
+            @apply mb-3 text-base font-bold uppercase md:text-lg text-greenDark font-openSans;
         }
         h3{
-            @apply mb-6 text-5xl font-bold leading-none text-dark font-amatic;
+            @apply mb-6 text-4xl font-bold leading-none md:text-5xl text-dark font-amatic;
         }
         p{
-            @apply text-dark font-openSans text-xl -tracking-wide font-light leading-[120%];
-            &:nth-last-child(){
-                @apply !mb-0;
+            @apply text-dark font-openSans text-lg md:text-xl -tracking-wide font-light leading-[120%];
+            &:last-child{
+                @apply mb-0;
             }
             em{
                 @apply flex items-center justify-center font-normal text-greenDark gap-x-1;
@@ -198,7 +195,7 @@
             }
         }
         a{
-            @apply inline-block px-6 py-2 text-lg font-bold border-2 rounded-md hover:bg-blue hover:text-white text-blue font-openSans leading-160 border-greenDark mt-9;
+            @apply inline-block px-4 py-2 mt-4 text-base font-bold border-2 rounded-md md:text-lg md:px-4 hover:bg-blue hover:text-white text-blue font-openSans leading-160 border-greenDark md:mt-9;
         }
 
     }
@@ -218,15 +215,15 @@
 }
 
 .countdown{
-    @apply relative text-center py-28 bg-greenDark/10;
+    @apply relative px-4 py-12 text-center lg:py-28 bg-greenDark/10 lg:px-0;
     .separator{
         @apply absolute right-0;
     }
     &--title{
-        @apply text-5xl font-bold font-amatic;
+        @apply text-4xl font-bold md:text-5xl font-amatic;
     }
     &--date{
-        @apply relative flex px-8 py-8 mx-auto mt-16 bg-white border-2 rounded-2xl w-max border-golden;
+        @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max border-golden;
         
         
         @keyframes heartbeat{
@@ -255,15 +252,15 @@
             animation: heartbeat 1.5s ease-in-out infinite;
         }
         &-box{
-            @apply flex flex-col justify-center gap-1 pl-8 pr-8 border-r border-grayDark;
+            @apply flex flex-col justify-center flex-1 gap-1 px-4 border-r md:px-8 border-grayDark;
             &:last-child{
                 @apply border-transparent;
             }
             strong{
-                @apply text-5xl font-dancing text-greenDark;
+                @apply text-4xl md:text-5xl font-dancing text-greenDark;
             }
             span{
-                @apply text-3xl font-amatic text-dark;
+                @apply text-lg md:text-3xl font-amatic text-dark;
             }
         }
     }
@@ -272,13 +269,13 @@
 .gallery{
     @apply relative overflow-x-clip bg-greenDark/10 ;
     &--title{
-        @apply mb-10 text-5xl font-bold text-center font-amatic;
+        @apply mb-10 font-bold text-center md:text-4xl md:text-5xl font-amatic;
     }
     .photo{
         @apply pb-5;
     }
     .caption{
-        @apply mt-3 mb-0 text-2xl font-bold text-center font-amatic text-blue line-clamp-1;
+        @apply mt-3 mb-0 text-lg font-bold text-center md:text-2xl font-amatic text-blue line-clamp-1;
     }
     &--slide{
         @apply p-0 m-0 list-none;
@@ -288,39 +285,73 @@
         }
       
         .slick-list {
-            @apply -mx-2 !pb-8;
+            @apply -mx-2 lg:!pb-8;
         }
     }
 }
 
 .rspv{
-    @apply relative py-28;
+    @apply relative px-4 py-12 lg:py-28 lg:px-0;
 
     &:before{
         @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full top-0 h-[300px];
     }
 
     &__wrap{
+        @apply p-6 md:p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
         h2{
-            @apply mb-0 text-5xl font-bold text-center font-amatic;
+            @apply mb-0 text-4xl font-bold text-center md:text-5xl font-amatic;
         }
         .separator{
             @apply mt-3 mb-6;
         }
         p{
-            @apply text-lg leading-120 text-dark -tracking-wide w-[80%] mx-auto text-center;
+            @apply text-lg leading-120 text-dark -tracking-wide md:w-[80%] mx-auto text-center;
             u{
                 @apply block mx-auto text-sm no-underline;
             }
         }
-        @apply p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
         
         .rsvp-form{
+
+            .select2{
+                @apply !w-full;
+            }
+
+            legend{
+                @apply block mb-3 font-medium leading-none text-dark;
+            }
+            
+            .asistence,
+            .restrictions,
+            .indicaciones,
+            .extra-guest {
+                @apply mt-4;
+            }
+            
             .extra-guest, 
             .restrictions, 
             .indicaciones {
                 @apply hidden;
+            }
+
+            .indicaciones{
+                label{
+                    @apply block mb-3 font-medium leading-none text-dark;
+                }
+            }
+
+            input[type="radio"]{
+                @apply accent-blue;
+            }
+
+            textarea{
+                @apply min-h-[105px] h-[105px] max-h-[105px];
+            }
+
+            .submit{
+                @apply px-4 py-2 mt-6 text-lg font-bold leading-none text-white uppercase transition-all duration-300 ease-in-out border-none hover:bg-rosa bg-blue font-amatic;
             }
         }
     }
@@ -376,7 +407,7 @@
     }
 
     .btn{
-        @apply inline-block w-full px-6 py-1 mt-3 text-center;
+        @apply inline-block w-full px-4 py-1 mt-3 text-center;
     }
 
 
@@ -421,7 +452,7 @@
 .site-footer{
     @apply py-2 bg-greenDark/10;
     .copyright{
-        @apply flex items-center justify-between text-white;
+        @apply flex flex-wrap items-center justify-center gap-3 px-4 text-white md:gap-0 md:justify-between lg:px-0;
         .logo{
             @apply mb-0 text-2xl font-dancing text-blue;;
         }

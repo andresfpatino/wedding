@@ -168,11 +168,11 @@ function rsvp_form() {
                 <label for="no-restriccion">No</label>
             </div>
             <div class="indicaciones">
-                <label for="indicaciones">Por favor indícanos qué debemos tener en cuenta</label>
+                <label for="indicaciones">Por favor indícanos qué debemos tener en cuenta:</label>
                 <textarea name="indicaciones" id="indicaciones"></textarea>
             </div>
         </fieldset>
-        <input type="submit" value="Confirmar">
+        <input class="submit" type="submit" value="Confirmar">
     </form> 
     
     <?php if (!empty($confirmation_message['titulo'])) : 

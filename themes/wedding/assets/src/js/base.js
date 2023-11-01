@@ -20,12 +20,12 @@ import "slick-carousel/slick/slick-theme.css";
         slidesToScroll: 1,
         draggable: true,
         responsive: [
-/*             {
+            {
 				breakpoint: 1440,
 				settings: {
-					slidesToShow: 5,
+					slidesToShow: 3,
 				}
-            }, */
+            },
             {
 				breakpoint: 721,
 				settings: {
@@ -35,7 +35,8 @@ import "slick-carousel/slick/slick-theme.css";
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
+                    speed: 10000,
 				}
 			}
         ]
