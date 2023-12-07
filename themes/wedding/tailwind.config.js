@@ -41,7 +41,8 @@ module.exports = {
                 'frame' : "url('/assets/src/img/frame.png')",
                 'couple' : "url('/assets/src/img/couple.png')",
                 'shapeBottom' : "url('/assets/src/img/shape-btn.png')",
-                'plantBottom' : "url('/assets/src/img/plant-btn.png')"
+                'plantBottom' : "url('/assets/src/img/plant-btn.png')",
+                'shapeForm' : "url('/assets/src/img/shape-form.png')"
             },
             lineHeight: {
                 '120': '120%',

@@ -8,17 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 (function ($) {
 
     $(".gallery--slide").slick({
-        infinite: true,
-        arrows: false,
-        dots: false,
+        arrows: true,
         autoplay: true,
-        cssEase: "linear",
-        initialSlide: 0,
-        speed: 8000,
-        autoplaySpeed: 0,
         slidesToShow: 5,
+        swipe: false,
         slidesToScroll: 1,
-        draggable: true,
+        appendArrows: $('.gallery--slide-navigation'),
+        prevArrow: $('.gallery--slide-navigation .prev'),
+        nextArrow: $('.gallery--slide-navigation .next'),
         responsive: [
             {
 				breakpoint: 1440,
@@ -36,10 +33,9 @@ import "slick-carousel/slick/slick-theme.css";
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 2,
-                    speed: 10000,
 				}
 			}
         ]
     });
-    
+
 })(jQuery);

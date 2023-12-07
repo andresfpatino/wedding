@@ -14,12 +14,15 @@
         @apply hidden md:block content-[''] w-[230px] h-[365px] bg-pathLeft bg-cover absolute left-0 top-0;
     } */
     &-content {
-        @apply pt-24;
+        @apply pt-12 md:pt-24;
     }
     &-header{
-        @apply px-4 pt-6 transition-all duration-300 ease-linear md:px-0;
+        @apply px-4 py-6 transition-all duration-300 ease-linear bg-transparent md:px-0;
         &__wrap{
-            @apply container flex items-center justify-between gap-x-4;
+            @apply flex items-center justify-between gap-4 container-mid;
+            @media (max-width: 320px) {
+                @apply flex-col;
+            }
             .logo{
                 h1{
                     @apply mb-0 text-2xl md:text-3xl font-dancing text-blue;
@@ -74,7 +77,7 @@
 
 .intro{
     @apply relative px-4 text-center md:px-0;
-    
+
     &:before{
         @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full bottom-0 h-[170px] md:h-[300px];
     }
@@ -117,7 +120,7 @@
 }
 
 .content-wedding{
-    @apply pt-12 md:pb-14 lg:pb-32 md:pt-20 lg:pt-52 bg-greenDark/10; 
+    @apply pt-12 md:pb-14 lg:pb-32 md:pt-20 lg:pt-52 bg-greenDark/10;
     .copy{
         @apply grid px-4 pb-12 text-left lg:grid-cols-12 xl:px-0 md:pb-0;
         &--content{
@@ -224,8 +227,8 @@
     }
     &--date{
         @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max border-golden;
-        
-        
+
+
         @keyframes heartbeat{
             0% {
                 transform: scale(0.85);
@@ -283,23 +286,45 @@
         .slick-slide {
             @apply mx-2;
         }
-      
+
         .slick-list {
             @apply -mx-2 lg:!pb-8;
+        }
+
+        &-navigation{
+            @apply absolute flex items-start justify-between w-full gap-3 px-3 md:px-6 top-1/2;
+            span{
+                @apply bg-white border border-white shadow-xl cursor-pointer;
+            }
+        }
+
+        &:hover{
+            > .gallery--slide-navigation{
+                @apply bg-blue;
+            }
         }
     }
 }
 
 .rspv{
-    @apply relative px-4 py-12 lg:py-28 lg:px-0;
+    @apply relative px-4 py-12 lg:pt-14 lg:pb-20 lg:px-0;
 
     &:before{
-        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full top-0 h-[300px];
+        @apply content-[''] bg-greenDark/10 -z-[1] absolute left-0 w-full top-0 h-[390px];
     }
 
     &__wrap{
         @apply p-6 md:p-12 bg-white lg:w-[60%] mx-auto rounded-xl;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 12px 27px 0px rgba(0, 0, 0, 0.10), 0px 50px 50px 0px rgba(0, 0, 0, 0.08), 0px 112px 67px 0px rgba(0, 0, 0, 0.05), 0px 199px 80px 0px rgba(0, 0, 0, 0.01), 0px 311px 87px 0px rgba(0, 0, 0, 0.00);
+
+        &::before{
+            @apply content-[''] -z-10 hidden lg:block absolute left-[273px] top-[150px] w-[200px] h-[286px] bg-contain bg-shapeForm bg-no-repeat;
+        }
+
+        &::after{
+            @apply content-[''] -z-10 hidden lg:block absolute right-[230px] bottom-[150px] w-[180px] h-[260px] bg-contain bg-shapeBottom bg-no-repeat rotate-180;
+        }
+
         h2{
             @apply mb-0 text-4xl font-bold text-center md:text-5xl font-amatic;
         }
@@ -312,7 +337,7 @@
                 @apply block mx-auto text-sm no-underline;
             }
         }
-        
+
         .rsvp-form{
 
             .select2{
@@ -322,16 +347,16 @@
             legend{
                 @apply block mb-3 font-medium leading-none text-dark;
             }
-            
+
             .asistence,
             .restrictions,
             .indicaciones,
             .extra-guest {
                 @apply mt-4;
             }
-            
-            .extra-guest, 
-            .restrictions, 
+
+            .extra-guest,
+            .restrictions,
             .indicaciones {
                 @apply hidden;
             }
@@ -384,9 +409,9 @@
     }
 
     .gm-style-iw-d{
-        @apply !overflow-hidden p-6;
+        @apply !overflow-hidden p-4 md:p-6;
     }
-    
+
     .gm-style-iw-tc{
         &::after{
             @apply bg-gray;
@@ -404,6 +429,9 @@
     }
     .marker-address{
         @apply mb-2 text-base leading-none text-center text-dark;
+        br{
+            @apply hidden md:block;
+        }
     }
 
     .btn{
@@ -420,7 +448,7 @@
 .modal {
     @apply bg-white min-h-[60vh] overflow-hidden relative rounded-md mx-auto w-[90%] lg:w-[752px] opacity-0 scale-50 transition-all ease-linear duration-300;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.03), 0px 18px 39px 0px rgba(0, 0, 0, 0.03), 0px 71px 71px 0px rgba(0, 0, 0, 0.03), 0px 161px 96px 0px rgba(0, 0, 0, 0.02), 0px 286px 114px 0px rgba(0, 0, 0, 0.00), 0px 446px 125px 0px rgba(0, 0, 0, 0.00);
-    
+
     &::-webkit-scrollbar {
         -webkit-appearance: none;
     }
@@ -434,7 +462,7 @@
 
     &.active{
         @apply scale-100 opacity-100;
-    }   
+    }
     &-close{
         @apply absolute top-[18px] right-[18px] z-10 cursor-pointer;
         path{
