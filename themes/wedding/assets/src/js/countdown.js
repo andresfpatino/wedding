@@ -29,6 +29,9 @@
                 document.getElementById("hours").innerText = 0;
                 document.getElementById("minutes").innerText = 0;
                 document.getElementById("seconds").innerText = 0;
+
+                document.getElementsByClassName("countdown--message")[0].style.display = "block";
+
                 clearInterval(x);
             } else {
                 document.getElementById("days").innerText = Math.floor(

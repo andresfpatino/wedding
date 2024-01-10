@@ -226,7 +226,7 @@
         @apply text-4xl font-bold md:text-5xl font-amatic;
     }
     &--date{
-        @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max lg:max-w-[562px] border-golden;
+        @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max lg:max-w-[570px] border-golden;
 
 
         @keyframes heartbeat{
@@ -268,7 +268,7 @@
         }
     }
     &--message{
-        @apply w-full mt-8 text-lg font-light text-center text-dark font-openSans;
+        @apply hidden w-full mt-8 text-lg font-light text-center text-dark font-openSans;
         p{
             @apply mb-0;
         }
