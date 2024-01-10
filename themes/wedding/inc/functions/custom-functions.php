@@ -25,6 +25,10 @@ add_filter('oembed_dataparse', function ($return, $data, $url){
 // Event date
 function event_date($fecha) {
     $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
+    if ($fecha_obj === false) {
+        // Manejar el error aquí, por ejemplo, puedes devolver un mensaje de error
+        return "<p class='date'>Fecha no válida</p>";
+    }
     $nombres_meses_espanol = array(
         'January' => 'enero',
         'February' => 'febrero',
@@ -44,7 +48,6 @@ function event_date($fecha) {
 
     return "<p class='date'>" . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
 }
-
 /** Google map API key **/
 function google_maps_api($api){
     $api['key'] = 'AIzaSyBHP7MZmlQgm_8IxzQUZgHzh6S3K-Oi_rI';

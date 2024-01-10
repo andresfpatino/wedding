@@ -10,12 +10,12 @@ function themeWedding_scripts(){
     wp_enqueue_script( 'sweetalert2', 'https://cdn.jsdelivr.net/npm/sweetalert2@11', null, '11', false);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/assets/dist/js/app.js', array('jquery'), '0.2', true);
 
-    $startDateCountdown = get_field('fecha');
+    $startDateTimeCountdown = get_field('fecha_hora');
     wp_localize_script(
         'theme-scripts',
         'admin_url',
         array(
-            'startCountDown' => $startDateCountdown
+            'startCountDown' => $startDateTimeCountdown
         )
     );
 }

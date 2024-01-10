@@ -80,12 +80,12 @@ get_header(); ?>
             <div class="container">
                 <h2 class="countdown--title"><?php echo get_field('titulo_countdown'); ?></h2> <?php
 
-                $startDateCountdown = get_field('fecha');
+                $startDateTimeCountdown = get_field('fecha_hora');
                 $todayGet           = date('m/d/Y');
                 $dateTimestamp1 = strtotime($todayGet);
-                $dateTimestamp2 = strtotime($startDateCountdown);
+                $dateTimestamp2 = strtotime($startDateTimeCountdown);
 
-                if ($startDateCountdown) : ?>
+                if ($startDateTimeCountdown) : ?>
                     <div class="countdown--date" id="countdown">
                         <svg class="heart" width="59" height="52" viewBox="0 0 59 52" fill="none"><path d="M54.3594 4.64058C48.1721 -1.54686 38.1404 -1.54686 31.953 4.64058C30.5983 5.99536 28.4016 5.99536 27.047 4.64058C20.8595 -1.54686 10.8279 -1.54686 4.64049 4.64058C-1.54683 10.8279 -1.54683 20.8596 4.64049 27.047L7.09364 29.5L28.5655 50.9718C29.0815 51.488 29.9184 51.488 30.4344 50.9718L51.9064 29.5L54.3594 27.047C60.5469 20.8596 60.5469 10.8279 54.3594 4.64058Z" fill="#8FA99D"/></svg>
                         <div class="countdown--date-box">
@@ -100,12 +100,21 @@ get_header(); ?>
                             <strong id="minutes"></strong>
                             <span>Minutos</span>
                         </div>
-                        <div class="countdown--date-box">
+                        <div class="countdown--date-box last">
                             <strong id="seconds"></strong>
                             <span>Segundos</span>
                         </div>
+
+                        <?php if (get_field('mensaje')) : ?>
+                            <div class="countdown--message">
+                                <?php echo get_field('mensaje'); ?>
+                            </div>
+                        <?php endif; ?>
+
                     </div> <?php
                 endif; ?>
+
+
 
             </div>
         </div>
