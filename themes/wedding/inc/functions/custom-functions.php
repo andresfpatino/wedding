@@ -23,10 +23,12 @@ add_filter('oembed_dataparse', function ($return, $data, $url){
 
 
 // Event date
-function event_date($fecha) {
-    $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
+function event_date() {
+
+    $fecha = get_field('fecha_hora');
+    $fecha_obj = DateTime::createFromFormat('m/d/Y h:i a', $fecha);
+
     if ($fecha_obj === false) {
-        // Manejar el error aquí, por ejemplo, puedes devolver un mensaje de error
         return "<p class='date'>Fecha no válida</p>";
     }
     $nombres_meses_espanol = array(
@@ -44,10 +46,23 @@ function event_date($fecha) {
         'December' => 'diciembre',
     );
 
-    $nombre_mes_espanol = $nombres_meses_espanol[$fecha_obj->format('F')];
+    $dias_semana_espanol = array(
+        'Monday' => 'Lunes',
+        'Tuesday' => 'Martes',
+        'Wednesday' => 'Miércoles',
+        'Thursday' => 'Jueves',
+        'Friday' => 'Viernes',
+        'Saturday' => 'Sábado',
+        'Sunday' => 'Domingo',
+    );
 
-    return "<p class='date'>" . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
+    $nombre_mes_espanol = $nombres_meses_espanol[$fecha_obj->format('F')];
+    $dia_semana_espanol = $dias_semana_espanol[$fecha_obj->format('l')];
+
+    return "<p class='date'>" . $dia_semana_espanol . ", " . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
 }
+add_shortcode('weeding-date', 'event_date');
+
 /** Google map API key **/
 function google_maps_api($api){
     $api['key'] = 'AIzaSyBHP7MZmlQgm_8IxzQUZgHzh6S3K-Oi_rI';

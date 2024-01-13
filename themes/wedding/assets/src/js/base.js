@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
     $(".gallery--slide").slick({
         arrows: true,
         autoplay: true,
-        slidesToShow: 5,
+        slidesToShow: 8,
         swipe: false,
         slidesToScroll: 1,
         appendArrows: $('.gallery--slide-navigation'),
@@ -18,15 +18,15 @@ import "slick-carousel/slick/slick-theme.css";
         nextArrow: $('.gallery--slide-navigation .next'),
         responsive: [
             {
-				breakpoint: 1440,
+				breakpoint: 1441,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 5,
 				}
             },
             {
-				breakpoint: 721,
+				breakpoint: 1025,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 3,
 				}
             },
 			{

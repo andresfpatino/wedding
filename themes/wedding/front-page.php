@@ -42,7 +42,7 @@ get_header(); ?>
                                 </div>
                             </div> <?php
                         endif; ?>
-                        <?php echo event_date( get_field('fecha') ); ?>
+                        <?php echo event_date(); ?>
                     </div> <?php
                 } ?>
             </div>
@@ -145,7 +145,9 @@ get_header(); ?>
         <div id="confirmacion" class="rspv">
             <div class="container">
                 <div class="rspv__wrap">
-                    <?php echo get_field('contenido_asistencia'); ?>
+                    <div class="rspv-content">
+                        <?php echo get_field('contenido_asistencia'); ?>
+                    </div>
                 </div>
             </div>
         </div>
