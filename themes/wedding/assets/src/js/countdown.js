@@ -1,3 +1,5 @@
+import confetti from 'canvas-confetti';
+
 (function () {
 
     let countDownModule = document.getElementById("countdown");
@@ -31,6 +33,26 @@
                 document.getElementById("seconds").innerText = 0;
 
                 document.getElementsByClassName("countdown--message")[0].style.display = "block";
+
+                var heart = confetti.shapeFromPath({
+                    path: 'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z',
+                    matrix: [0.05, 0, 0, 0.05, -5.566666666666666, -5.533333333333333]
+                  });
+
+                let confettiInterval = setInterval(function() {
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        shapes: [heart],
+                        colors: ['#4e6c8a', '#8fa99d', '#B7797A']
+                    });
+                }, 2000); // Dispara confetti cada segundo
+
+                // Detiene el confetti después de 5 segundos
+                setTimeout(function() {
+                    clearInterval(confettiInterval);
+                }, 8000);
 
                 clearInterval(x);
             } else {

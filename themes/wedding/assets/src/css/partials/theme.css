@@ -230,7 +230,9 @@
     &--date{
         @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max lg:max-w-[570px] border-golden;
 
-
+        canvas{
+            @apply absolute top-0 left-0 w-full h-full;
+        }
         @keyframes heartbeat{
             0% {
                 transform: scale(0.85);

@@ -109,12 +109,10 @@ get_header(); ?>
                             <div class="countdown--message">
                                 <?php echo get_field('mensaje'); ?>
                             </div>
+                            <canvas id="my-canvas"></canvas>
                         <?php endif; ?>
-
                     </div> <?php
                 endif; ?>
-
-
 
             </div>
         </div>

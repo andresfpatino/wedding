@@ -16,6 +16,7 @@
     ],
     "dependencies": {
         "@tailwindcss/typography": "0.5.9",
+        "canvas-confetti": "^1.9.2",
         "select2": "^4.1.0-rc.0"
     },
     "devDependencies": {
