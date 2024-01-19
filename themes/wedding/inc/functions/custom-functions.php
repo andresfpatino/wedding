@@ -59,7 +59,7 @@ function event_date() {
     $nombre_mes_espanol = $nombres_meses_espanol[$fecha_obj->format('F')];
     $dia_semana_espanol = $dias_semana_espanol[$fecha_obj->format('l')];
 
-    return "<p class='date'>" . $dia_semana_espanol . ", " . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</p>";
+    return "<span class='date'>" . $dia_semana_espanol . ", " . $fecha_obj->format('j \d\e ') . $nombre_mes_espanol . $fecha_obj->format(' \d\e Y') . "</span>";
 }
 add_shortcode('weeding-date', 'event_date');
 

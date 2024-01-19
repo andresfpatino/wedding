@@ -42,7 +42,7 @@ get_header(); ?>
                                 </div>
                             </div> <?php
                         endif; ?>
-                        <?php echo event_date(); ?>
+                        <h2><?php echo event_date(); ?></h2>
                     </div> <?php
                 } ?>
             </div>
