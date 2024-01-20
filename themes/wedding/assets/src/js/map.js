@@ -10,9 +10,9 @@
             var args = {
                 zoom		:  $el.data('zoom') || 15,
                 center		: new google.maps.LatLng(0, 0),
-                mapTypeId	: google.maps.MapTypeId.ROADMAP, 
+                mapTypeId	: google.maps.MapTypeId.ROADMAP,
                 streetViewControl: false,
-                mapTypeControl: false, 
+                mapTypeControl: false,
                 fullscreenControl: false,
                 draggable: true,
                 clickableIcons: false,
@@ -159,7 +159,7 @@
         }
 
         /*
-        *  add_marker 
+        *  add_marker
         *  This function will add a marker to the selected Google Map
         */
 
@@ -170,15 +170,15 @@
 
             // create marker
             var baseurl = window.location.origin+window.location.pathname;
-            var baseIcon = `${baseurl}wp-content/themes/wedding/assets/src/img/favicon.png`;
- 
+            var baseIcon = `${baseurl}wp-content/themes/wedding/assets/src/img/favicon.webp`;
+
             var marker = new google.maps.Marker({
                 position	: latlng,
                 map			: map,
                 icon:     baseIcon
             });
 
-            
+
 
             // add to array
             map.markers.push( marker );
@@ -189,9 +189,9 @@
                 var infowindow = new google.maps.InfoWindow({
                     content		: $marker.html()
                 });
-                
+
                 // show info window when marker is clicked
-                google.maps.event.addListener(marker, 'click', function() {                         
+                google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open( map, marker );
                 });
 
@@ -227,7 +227,7 @@
             else{
                 // fit to bounds
                 map.setCenter( bounds.getCenter() );
-                map.setZoom( 13 ); 
+                map.setZoom( 13 );
             }
         }
 
@@ -237,9 +237,9 @@
         */
 
         // global var
-        var map = null;   
+        var map = null;
 
-        $('.acf-map').each(function(){           
+        $('.acf-map').each(function(){
             map = initMap( $(this) );  // create map
         });
 

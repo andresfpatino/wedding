@@ -73,7 +73,7 @@ function rsvp_form() {
 
             $confirmation_message['titulo'] = '¡Hola, ' . esc_html($invitado) . '!';
             $confirmation_message['mensaje'] = 'Parece que ya habias confirmado tu asistencia. <br> Por favor, comunícate con nosotros.';
-            $confirmation_message['icon'] = get_template_directory_uri() . '/assets/src/img/astonished.png';
+            $confirmation_message['icon'] = get_template_directory_uri() . '/assets/src/img/astonished.webp';
 
         } else {
 
@@ -99,10 +99,10 @@ function rsvp_form() {
 
             if($asistencia == "Asistiré"){
                 $confirmation_message['mensaje'] = 'Tu asistencia ha sido confirmada. <br> ¡Nos encanta contar con tu presencia!';
-                $confirmation_message['icon'] =  get_template_directory_uri() . '/assets/src/img/star-struck.png';
+                $confirmation_message['icon'] =  get_template_directory_uri() . '/assets/src/img/star-struck.webp';
             } else{
                 $confirmation_message['mensaje'] = 'Es una lástima que no puedas acompañarnos.';
-                $confirmation_message['icon'] = get_template_directory_uri() . '/assets/src/img/broken_heart.png';
+                $confirmation_message['icon'] = get_template_directory_uri() . '/assets/src/img/broken_heart.webp';
             }
         }
 

@@ -16,7 +16,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="icon" href="<?php echo get_template_directory_uri() . '/assets/src/img/favicon.png' ?>">
+    <link rel="icon" href="<?php echo get_template_directory_uri() . '/assets/src/img/favicon.webp' ?>">
 
     <!--/Favicon-->
     <meta name="msapplication-TileColor" content="#4F6C8A">

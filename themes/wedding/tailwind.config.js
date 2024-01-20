@@ -33,16 +33,16 @@ module.exports = {
                 'container-fluid' : '1800px',
             },
             backgroundImage: {
-                'paper' : "url('/assets/src/img/background.jpg')",
-                'portraitIzq' : "url('/assets/src/img/shape-izq.png')",
-                'portraitDer' : "url('/assets/src/img/shape-der.png')",
-                'pathLeft' : "url('/assets/src/img/path-left.png')",
-                'pathRight' : "url('/assets/src/img/path-right.png')",
-                'frame' : "url('/assets/src/img/frame.png')",
-                'couple' : "url('/assets/src/img/couple.png')",
-                'shapeBottom' : "url('/assets/src/img/shape-btn.png')",
-                'plantBottom' : "url('/assets/src/img/plant-btn.png')",
-                'shapeForm' : "url('/assets/src/img/shape-form.png')"
+                'paper' : "url('/assets/src/img/background.webp')",
+                'portraitIzq' : "url('/assets/src/img/shape-izq.webp')",
+                'portraitDer' : "url('/assets/src/img/shape-der.webp')",
+                'pathLeft' : "url('/assets/src/img/path-left.webp')",
+                'pathRight' : "url('/assets/src/img/path-right.webp')",
+                'frame' : "url('/assets/src/img/frame.webp')",
+                'couple' : "url('/assets/src/img/couple.webp')",
+                'shapeBottom' : "url('/assets/src/img/shape-btn.webp')",
+                'plantBottom' : "url('/assets/src/img/plant-btn.webp')",
+                'shapeForm' : "url('/assets/src/img/shape-form.webp')"
             },
             lineHeight: {
                 '120': '120%',
