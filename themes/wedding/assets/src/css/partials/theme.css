@@ -124,7 +124,7 @@
     .copy{
         @apply grid px-4 pb-12 text-left lg:grid-cols-12 xl:px-0 md:pb-0;
         &--content{
-            @apply lg:col-span-7 lg:pr-12;
+            @apply lg:col-span-6 lg:pr-12;
             h5{
                 @apply font-bold uppercase font-openSans text-greenDark;
             }
@@ -139,17 +139,17 @@
             }
         }
         &--thumbs{
-            @apply lg:col-span-5 md:mt-8 lg:mt-0;
+            @apply lg:col-span-6 md:mt-8 lg:mt-0;
             &-wrap{
                 @apply relative hidden w-full h-full md:flex md:justify-center md:items-center md:gap-6;
             }
             .photo{
-                @apply lg:absolute md:w-[25%] lg:w-[240px];
+                @apply lg:absolute md:w-[25%] lg:w-[275px];
                 &:nth-child(1){
                     @apply lg:-top-32 lg:left-0 xl:left-12;
                 }
                 &:nth-child(2){
-                    @apply lg:right-4 lg:-top-[80px] xl:right-[60px];
+                    @apply lg:right-4 lg:-top-[150px] xl:right-[90px];
                 }
                 &:nth-child(3){
                     @apply lg:-bottom-14;
@@ -174,9 +174,7 @@
             @apply mb-3 text-base font-bold uppercase md:text-lg text-greenDark font-openSans;
         }
         h3{
-            .date{
-                @apply mb-6 text-4xl font-bold leading-none md:text-5xl text-dark font-amatic;
-            }
+            @apply mb-6 text-4xl font-bold leading-none md:text-5xl text-dark font-amatic;
         }
         p{
             @apply text-dark font-openSans text-lg md:text-xl -tracking-wide font-light leading-[120%];
@@ -228,7 +226,7 @@
         @apply text-4xl font-bold md:text-5xl font-amatic;
     }
     &--date{
-        @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max lg:max-w-[580px] border-golden;
+        @apply relative flex flex-wrap w-full p-4 mx-auto mt-8 bg-white border-2 md:p-8 md:mt-16 rounded-2xl lg:w-max border-golden;
 
         canvas{
             @apply absolute top-0 left-0 w-full h-full;
@@ -255,11 +253,11 @@
         }
 
         .heart{
-            @apply absolute left-0 right-0 m-auto -top-6 w-9;
+            @apply absolute left-0 right-0 m-auto -top-8 sm:-top-6 w-9;
             animation: heartbeat 1.5s ease-in-out infinite;
         }
         &-box{
-            @apply flex flex-col justify-center flex-1 gap-1 px-4 border-r md:px-8 border-grayDark;
+            @apply flex flex-col justify-center flex-1 gap-1 border-r sm:px-4 md:px-8 border-grayDark;
             &.last{
                 @apply border-transparent;
             }
@@ -282,10 +280,10 @@
 .gallery{
     @apply relative px-4 overflow-x-clip bg-greenDark/10 md:px-6 xl:px-0;
     &--title{
-        @apply mb-10 font-bold text-center md:text-5xl font-amatic;
+        @apply mb-10 font-bold leading-none text-center md:text-5xl font-amatic;
     }
     .photo{
-        @apply pb-5;
+        @apply px-2 pb-4 md:px-3;
     }
     .caption{
         @apply mt-3 mb-0 text-lg font-bold text-center md:text-2xl font-amatic text-blue line-clamp-1;
@@ -347,7 +345,7 @@
             @apply mt-3 mb-6;
         }
         p{
-            @apply text-lg leading-120 text-dark -tracking-wide md:w-[80%] mx-auto text-center;
+            @apply text-xl leading-120 text-dark -tracking-wide md:w-[80%] mx-auto text-center;
             u{
                 @apply block mx-auto text-sm no-underline;
             }
