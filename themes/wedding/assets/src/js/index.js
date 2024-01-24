@@ -5,4 +5,5 @@ import '../js/countdown.js';
 import '../js/modal.js';
 import '../js/map.js';
 import '../js/form';
+import '../js/lightBox';
 import '../js/coreVitals';

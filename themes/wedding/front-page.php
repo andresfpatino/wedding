@@ -123,10 +123,10 @@ get_header(); ?>
             if( $images ): ?>
                 <div class="gallery--slide">
                     <?php foreach( $images as $image ): ?>
-                        <div class="photo">
+                        <a class="photo" href="<?php echo esc_url($image['sizes']['large']); ?>" data-pswp-width="<?php echo esc_attr($image['width']); ?>" data-pswp-height="<?php echo esc_attr($image['height']); ?>">
                             <img src="<?php echo esc_url($image['sizes']['large']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             <p class="caption"><?php echo esc_html($image['caption']); ?></p>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                 </div>
                 <div class="gallery--slide-navigation">

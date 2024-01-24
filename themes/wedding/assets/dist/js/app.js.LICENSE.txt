@@ -1,4 +1,9 @@
 /*!
+  * PhotoSwipe Lightbox 5.4.3 - https://photoswipe.com
+  * (c) 2023 Dmytro Semenov
+  */
+
+/*!
  * Select2 4.1.0-rc.0
  * https://select2.github.io
  *

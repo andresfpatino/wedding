@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
         slidesToShow: 8,
         swipe: false,
         slidesToScroll: 1,
+        swipe: true,
         appendArrows: $('.gallery--slide-navigation'),
         prevArrow: $('.gallery--slide-navigation .prev'),
         nextArrow: $('.gallery--slide-navigation .next'),
