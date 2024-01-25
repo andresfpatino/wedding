@@ -54,7 +54,10 @@ if (!function_exists('themeWedding')) :
         /*
         * New size images
         */
-        add_image_size( 'portada', 700, 520, true ); 
+        add_image_size( 'portada', 700, 520, true );
+        add_image_size( 'gallery', 420, 510, true );
+        add_image_size( 'copyThumb', 312, 373, true );
+
     }
 endif;
 add_action('after_setup_theme', 'themeWedding');

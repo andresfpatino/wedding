@@ -22,26 +22,7 @@ get_header(); ?>
                 the_content();
                 if ( has_post_thumbnail() ) { ?>
                     <div class="portrait">
-                        <a href="#" class="modal-trigger">
-                            <div class="play-icon">
-                                <img alt="playIcon" width="48" height="48" src="data:image/png;base64,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">
-                            </div>
-                            <?php the_post_thumbnail('portada', array('class' => 'mainThumbnail', 'loading' => 'false' )); ?>
-                        </a>
-                        <?php
-                        $video = get_field('video');
-                        if( $video) : ?>
-                            <div class="modal-overlay" id="modalOverlay">
-                                <div class="modal">
-                                    <svg class="modal-close" id="closeModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0507 12L0 22.0507L1.94928 24L12 13.9493L22.0507 24L24 22.0507L13.9493 12L24 1.94928L22.0507 0L12 10.0507L1.94928 0L0 1.94928L10.0507 12Z" fill="black"/>
-                                    </svg>
-                                    <video id="video" loop="" playsinline="" preload="auto" poster="<?php echo get_the_post_thumbnail_url(); ?>">
-                                        <source src="<?php echo $video ?>" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div> <?php
-                        endif; ?>
+                        <?php the_post_thumbnail('portada', array('class' => 'mainThumbnail', 'loading' => 'false' )); ?>
                         <h2><?php echo event_date(); ?></h2>
                     </div> <?php
                 } ?>
@@ -56,9 +37,12 @@ get_header(); ?>
                     </div>
                     <div class="copy--thumbs">
                         <div class="copy--thumbs-wrap"> <?php
-                            fps_get_Image(get_field('thumbnail_left'), 'photo transform-left');
-                            fps_get_Image(get_field('thumbnail_middle'), 'photo transform-middle');
-                            fps_get_Image(get_field('thumbnail_right'), 'photo transform-right'); ?>
+                            $thumbnail_left = get_field('thumbnail_left');
+                            $thumbnail_middle = get_field('thumbnail_middle');
+                            $thumbnail_right = get_field('thumbnail_right');  ?>
+                            <img class="photo transform-left" src="<?php echo esc_url($thumbnail_left['sizes']['copyThumb']); ?>" width="<?php echo round($thumbnail_left['width'] / 2); ?>" height="<?php echo round($thumbnail_left['height'] / 2); ?>" alt="<?php echo esc_attr($thumbnail_left['alt']); ?>" loading="lazy" />
+                            <img class="photo transform-middle" src="<?php echo esc_url($thumbnail_middle['sizes']['copyThumb']); ?>" width="<?php echo round($thumbnail_middle['width'] / 2); ?>" height="<?php echo round($thumbnail_middle['height'] / 2); ?>" alt="<?php echo esc_attr($thumbnail_middle['alt']); ?>" loading="lazy" />
+                            <img class="photo transform-right" src="<?php echo esc_url($thumbnail_right['sizes']['copyThumb']); ?>" width="<?php echo round($thumbnail_right['width'] / 2); ?>" height="<?php echo round($thumbnail_right['height'] / 2); ?>" alt="<?php echo esc_attr($thumbnail_right['alt']); ?>" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -124,11 +108,11 @@ get_header(); ?>
                 <div class="gallery--slide">
                     <?php foreach( $images as $image ): ?>
                         <a class="photo" href="<?php echo esc_url($image['sizes']['large']); ?>" data-pswp-width="<?php echo esc_attr($image['width']); ?>" data-pswp-height="<?php echo esc_attr($image['height']); ?>">
-                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <img src="<?php echo esc_url($image['sizes']['gallery']); ?>" width="<?php echo round($image['width'] / 2); ?>" height="<?php echo round($image['height'] / 2); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy" />
                             <p class="caption"><?php echo esc_html($image['caption']); ?></p>
                         </a>
                     <?php endforeach; ?>
-                </div>
+                </div
                 <div class="gallery--slide-navigation">
                     <span class="prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none"><path d="M13.9151 24.7059L13.3096 25.3372L12.7059 24.7059L13.3096 24.0746L13.9151 24.7059ZM14.5205 24.0746L21.3618 31.208L20.1509 32.4706L13.3096 25.3372L14.5205 24.0746ZM13.3096 24.0746L20.1509 16.9412L21.3618 18.2038L14.5205 25.3372L13.3096 24.0746ZM13.9151 23.8142L35.2941 23.8142L35.2941 25.5975L13.9151 25.5975L13.9151 23.8142Z" fill="#4F6C8A"></path></svg>
