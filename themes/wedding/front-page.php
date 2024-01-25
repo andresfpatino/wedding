@@ -112,7 +112,7 @@ get_header(); ?>
                             <p class="caption"><?php echo esc_html($image['caption']); ?></p>
                         </a>
                     <?php endforeach; ?>
-                </div
+                </div>
                 <div class="gallery--slide-navigation">
                     <span class="prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none"><path d="M13.9151 24.7059L13.3096 25.3372L12.7059 24.7059L13.3096 24.0746L13.9151 24.7059ZM14.5205 24.0746L21.3618 31.208L20.1509 32.4706L13.3096 25.3372L14.5205 24.0746ZM13.3096 24.0746L20.1509 16.9412L21.3618 18.2038L14.5205 25.3372L13.3096 24.0746ZM13.9151 23.8142L35.2941 23.8142L35.2941 25.5975L13.9151 25.5975L13.9151 23.8142Z" fill="#4F6C8A"></path></svg>
